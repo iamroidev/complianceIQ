@@ -1,0 +1,67 @@
+{
+  "id": "expired-certification",
+  "title": "Certificate expired, then renewed",
+  "ruleId": "CERT-001",
+  "domain": "people",
+  "note": "Move 15 days past Ama Serwaa Owusu's First Aid expiry, attach the renewal, and the alert auto-resolves. The same jump also surfaces the standing gaps (Nana's missing certificate, the penetration-test deadline, Meridian's missing SOC 2, Cedar's lapsed DPA, the dependency scan warning) — all six opens are part of the expected set.",
+  "steps": [
+    { "kind": "advanceDays", "days": 15 },
+    {
+      "kind": "upsertCertification",
+      "personId": "p_ama",
+      "certType": "First Aid",
+      "issuedOn": "2026-03-16",
+      "expiresOn": "2027-03-15"
+    },
+    { "kind": "runChecks" }
+  ],
+  "expected": {
+    "opened": [
+      { "ruleId": "CERT-001", "subjectId": "p_ama" },
+      { "ruleId": "CERT-001", "subjectId": "p_nana" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_pen_test" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_deps_scan" },
+      { "ruleId": "VEND-001", "subjectId": "v_meridian" },
+      { "ruleId": "VEND-001", "subjectId": "v_cedar" }
+    ],
+    "resolved": [{ "ruleId": "CERT-001", "subjectId": "p_ama" }]
+  },
+  "twin": {
+    "title": "Negative control: certificates and deadlines in order, same 15-day jump",
+    "note": "Every gap the jump would expose is closed first — renewed certificate for Ama, a Security awareness certificate for Nana, the two deadlines completed, Meridian's SOC 2 and Cedar's DPA on file — so the same advance may not produce an alert.",
+    "steps": [
+      {
+        "kind": "upsertCertification",
+        "personId": "p_ama",
+        "certType": "First Aid",
+        "issuedOn": "2026-03-16",
+        "expiresOn": "2027-03-15"
+      },
+      {
+        "kind": "upsertCertification",
+        "personId": "p_nana",
+        "certType": "Security awareness",
+        "issuedOn": "2026-03-01",
+        "expiresOn": "2027-03-01"
+      },
+      { "kind": "completeObligation", "obligationId": "ob_pen_test" },
+      { "kind": "completeObligation", "obligationId": "ob_deps_scan" },
+      {
+        "kind": "upsertVendorDocument",
+        "vendorId": "v_meridian",
+        "documentType": "soc2_report",
+        "validFrom": "2025-01-01",
+        "expiresOn": "2027-01-01"
+      },
+      {
+        "kind": "upsertVendorDocument",
+        "vendorId": "v_cedar",
+        "documentType": "dpa",
+        "validFrom": "2026-03-01",
+        "expiresOn": "2027-03-10"
+      },
+      { "kind": "advanceDays", "days": 15 }
+    ],
+    "expected": { "opened": [], "resolved": [] }
+  }
+}

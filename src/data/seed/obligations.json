@@ -1,0 +1,1086 @@
+[
+  {
+    "id": "ob_firstaid_renewal",
+    "title": "First Aid certification renewal",
+    "plainDescription": "Clinical staff must renew their First Aid certificate so it never lapses.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_training_certification",
+      "quote": "Clinical staff must hold a current First Aid certificate.",
+      "quoteSpan": [
+        368,
+        425
+      ]
+    },
+    "cadence": "annual",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "CERT-001"
+    ],
+    "evidenceRequired": [
+      "certificate copy"
+    ]
+  },
+  {
+    "id": "ob_aml_training",
+    "title": "AML training renewal",
+    "plainDescription": "Treasury staff complete anti-money-laundering training once a year.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_training_certification",
+      "quote": "Treasury staff must complete AML training annually.",
+      "quoteSpan": [
+        427,
+        478
+      ]
+    },
+    "cadence": "annual",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "CERT-001"
+    ],
+    "evidenceRequired": [
+      "training certificate"
+    ]
+  },
+  {
+    "id": "ob_security_awareness",
+    "title": "Security awareness training renewal",
+    "plainDescription": "Every member of staff refreshes security awareness training yearly.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_training_certification",
+      "quote": "All staff must complete security awareness training each year.",
+      "quoteSpan": [
+        480,
+        542
+      ]
+    },
+    "cadence": "annual",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "CERT-001"
+    ],
+    "evidenceRequired": [
+      "training certificate"
+    ]
+  },
+  {
+    "id": "ob_cert_role_validity",
+    "title": "No work on an expired certification",
+    "plainDescription": "Someone whose required certificate is missing or expired stops the work that depends on it.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_training_certification",
+      "quote": "A person whose required certificate is missing or expired may not perform the tasks that depend on it until a valid certificate is on file.",
+      "quoteSpan": [
+        544,
+        683
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "CERT-001"
+    ]
+  },
+  {
+    "id": "ob_cert_monthly_status",
+    "title": "Monthly expiry report to managers",
+    "plainDescription": "Managers receive a report of upcoming certificate expiry dates every month.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_training_certification",
+      "quote": "Certification expiry dates must be reported to managers each month.",
+      "quoteSpan": [
+        1230,
+        1297
+      ]
+    },
+    "cadence": "monthly",
+    "dueOn": "2026-04-01",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_cert_renewal_notice",
+    "title": "Renew certificates 30 days ahead",
+    "plainDescription": "Staff start renewing a certificate at least 30 days before it expires.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_training_certification",
+      "quote": "Staff must renew each certificate at least 30 days before it expires.",
+      "quoteSpan": [
+        955,
+        1024
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_training_records",
+    "title": "Training records kept three years",
+    "plainDescription": "Training records stay on file for three years after someone leaves.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_training_certification",
+      "quote": "Training records must be kept for three years after a person leaves the firm.",
+      "quoteSpan": [
+        1299,
+        1376
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_vendor_critical_docs",
+    "title": "Critical vendor documents",
+    "plainDescription": "Critical-tier vendors file a current SOC 2 report, a data processing agreement and insurance proof.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "Critical-tier vendors must provide a current SOC 2 report, a signed data processing agreement and proof of insurance.",
+      "quoteSpan": [
+        270,
+        387
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "VEND-001"
+    ],
+    "evidenceRequired": [
+      "SOC 2 report",
+      "signed DPA",
+      "insurance certificate"
+    ]
+  },
+  {
+    "id": "ob_vendor_standard_docs",
+    "title": "Standard vendor documents",
+    "plainDescription": "Standard-tier vendors file a signed data processing agreement.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "Standard-tier vendors must provide a signed data processing agreement.",
+      "quoteSpan": [
+        389,
+        459
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "VEND-001"
+    ],
+    "evidenceRequired": [
+      "signed DPA"
+    ]
+  },
+  {
+    "id": "ob_vendor_insurance_renewal",
+    "title": "Vendor insurance renewal",
+    "plainDescription": "Insurance certificates are renewed yearly and the evidence is filed.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "Insurance certificates must be renewed annually and the renewal evidence must be filed with the vendor record.",
+      "quoteSpan": [
+        561,
+        671
+      ]
+    },
+    "cadence": "annual",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "VEND-001"
+    ]
+  },
+  {
+    "id": "ob_vendor_dpa_renewal",
+    "title": "Vendor DPA renewal",
+    "plainDescription": "Data processing agreements are renewed before they expire.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "Data processing agreements must be renewed before they expire.",
+      "quoteSpan": [
+        673,
+        735
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "VEND-001"
+    ]
+  },
+  {
+    "id": "ob_vendor_review_annual",
+    "title": "Annual vendor review",
+    "plainDescription": "Each vendor's owner reviews it at least once a year and records the date.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "Each vendor must be reviewed at least annually by its named owner, and the review date must be recorded on the vendor record.",
+      "quoteSpan": [
+        763,
+        888
+      ]
+    },
+    "cadence": "annual",
+    "dueOn": "2026-06-30",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_vendor_quarterly_risk",
+    "title": "Quarterly vendor risk ratings",
+    "plainDescription": "Vendor risk ratings are refreshed every quarter.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "Vendor risk ratings must be refreshed each quarter.",
+      "quoteSpan": [
+        890,
+        941
+      ]
+    },
+    "cadence": "quarterly",
+    "dueOn": "2026-04-15",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_offboarding",
+    "title": "Vendor offboarding within 30 days of contract end",
+    "plainDescription": "Remove a vendor's access and data within 30 days of the contract ending.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "Vendor access must be revoked within 30 days of contract termination.",
+      "quoteSpan": [
+        962,
+        1031
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_vendor_contract_first",
+    "title": "Contract before work starts",
+    "plainDescription": "A signed contract is in place before any vendor begins work.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_vendor_management",
+      "quote": "A signed contract must be in place before any vendor starts work.",
+      "quoteSpan": [
+        461,
+        526
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_payment_5k",
+    "title": "One approver from USD 5,000",
+    "plainDescription": "Payments of USD 5,000 or more need one approver who is not the requester.",
+    "kind": "threshold",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "Payments of USD 5,000 or more require one approver who did not request the payment.",
+      "quoteSpan": [
+        275,
+        358
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "FIN-001"
+    ]
+  },
+  {
+    "id": "ob_payment_25k",
+    "title": "Two approvers from USD 25,000",
+    "plainDescription": "Payments of USD 25,000 or more need two different approvers.",
+    "kind": "threshold",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "Payments of USD 25,000 or more require two distinct approvers.",
+      "quoteSpan": [
+        360,
+        422
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "FIN-001"
+    ]
+  },
+  {
+    "id": "ob_payment_wire_50k",
+    "title": "Treasury sign-off above USD 50,000",
+    "plainDescription": "Wire transfers above USD 50,000 also need the treasury manager.",
+    "kind": "threshold",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "Wire transfers above USD 50,000 require approval by the treasury manager in addition to the two distinct approvers.",
+      "quoteSpan": [
+        424,
+        539
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "FIN-001"
+    ]
+  },
+  {
+    "id": "ob_payment_no_self",
+    "title": "No self-approval",
+    "plainDescription": "The person who requested a payment can never approve it.",
+    "kind": "prohibition",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "The requester may never approve their own payment.",
+      "quoteSpan": [
+        559,
+        609
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "FIN-001"
+    ]
+  },
+  {
+    "id": "ob_payment_distinct",
+    "title": "Approvals must be distinct",
+    "plainDescription": "Two approvals from one person only count once.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "Two approvals from the same person count as one.",
+      "quoteSpan": [
+        611,
+        659
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "FIN-001"
+    ]
+  },
+  {
+    "id": "ob_payment_quarterly_exceptions",
+    "title": "Quarterly review of payment exceptions",
+    "plainDescription": "Payment policy exceptions are logged and reviewed every quarter.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "Payment policy exceptions must be logged and reviewed each quarter.",
+      "quoteSpan": [
+        996,
+        1063
+      ]
+    },
+    "cadence": "quarterly",
+    "dueOn": "2026-04-30",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_payment_evidence",
+    "title": "Approval evidence retained",
+    "plainDescription": "Approval evidence stays filed with each payment record.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "The approval evidence for each payment must be retained with the payment record.",
+      "quoteSpan": [
+        677,
+        757
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_payment_reconciliation",
+    "title": "Monthly reconciliation outside payments",
+    "plainDescription": "Balances are reconciled monthly by someone outside the payments team.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_payment_approval",
+      "quote": "Balances must be reconciled monthly by someone outside the payments team.",
+      "quoteSpan": [
+        759,
+        832
+      ]
+    },
+    "cadence": "monthly",
+    "dueOn": "2026-04-30",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_qtr_filing",
+    "title": "Quarterly suspicious activity filing",
+    "plainDescription": "File the quarterly suspicious activity summary with the designated regulator.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_regulatory_calendar",
+      "quote": "A suspicious activity summary must be filed within fifteen days of each quarter end.",
+      "quoteSpan": [
+        260,
+        344
+      ]
+    },
+    "cadence": "quarterly",
+    "dueOn": "2026-04-15",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "filing receipt"
+    ]
+  },
+  {
+    "id": "ob_sar_filing",
+    "title": "Suspicious activity report within 30 days",
+    "plainDescription": "A suspicious activity report goes out within 30 days of detecting the facts.",
+    "kind": "deadline",
+    "source": {
+      "documentId": "doc_regulatory_calendar",
+      "quote": "A suspicious activity report must be filed within 30 calendar days of initial detection of the facts that support it.",
+      "quoteSpan": [
+        346,
+        463
+      ]
+    },
+    "dueOn": "2026-04-10",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "filing receipt"
+    ]
+  },
+  {
+    "id": "ob_ctr_filing",
+    "title": "Currency transaction report within 15 days",
+    "plainDescription": "Currency transaction reports are filed within 15 days of the transaction.",
+    "kind": "deadline",
+    "source": {
+      "documentId": "doc_regulatory_calendar",
+      "quote": "Currency transaction reports must be filed within 15 days of the reportable transaction.",
+      "quoteSpan": [
+        465,
+        553
+      ]
+    },
+    "dueOn": "2026-04-30",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "filing receipt"
+    ]
+  },
+  {
+    "id": "ob_tax_filing",
+    "title": "Quarterly tax filing",
+    "plainDescription": "Quarterly tax filings go in at the end of April, July, October and January.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_regulatory_calendar",
+      "quote": "Quarterly tax filings are due at the end of April, July, October and January.",
+      "quoteSpan": [
+        580,
+        657
+      ]
+    },
+    "cadence": "quarterly",
+    "dueOn": "2026-04-30",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "tax filing receipt"
+    ]
+  },
+  {
+    "id": "ob_board_summary",
+    "title": "Annual board summary",
+    "plainDescription": "The board receives the annual summary of filed reports each January.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_regulatory_calendar",
+      "quote": "The annual summary of filed reports must be delivered to the board each January.",
+      "quoteSpan": [
+        659,
+        739
+      ]
+    },
+    "cadence": "annual",
+    "dueOn": "2026-01-31",
+    "lastCompletedOn": "2026-01-20",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "board pack"
+    ]
+  },
+  {
+    "id": "ob_licence_renewal",
+    "title": "Operating licence renewal",
+    "plainDescription": "The operating licence is renewed every two years, submitted 60 days early.",
+    "kind": "deadline",
+    "source": {
+      "documentId": "doc_regulatory_calendar",
+      "quote": "Our operating licence must be renewed every two years, and the renewal must be submitted at least 60 days before it expires.",
+      "quoteSpan": [
+        775,
+        899
+      ]
+    },
+    "dueOn": "2027-01-31",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "renewal confirmation"
+    ]
+  },
+  {
+    "id": "ob_horizon_scan",
+    "title": "Monthly horizon scanning",
+    "plainDescription": "The compliance team reviews regulatory changes every month.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_regulatory_calendar",
+      "quote": "Regulatory changes must be reviewed monthly by the compliance team.",
+      "quoteSpan": [
+        925,
+        992
+      ]
+    },
+    "cadence": "monthly",
+    "dueOn": "2026-04-01",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_sod_deploy",
+    "title": "Separate code changes from deploys",
+    "plainDescription": "Nobody both changes production code and deploys it without a second person approving.",
+    "kind": "prohibition",
+    "source": {
+      "documentId": "doc_access_control",
+      "quote": "No one person may both change production code and deploy it to production without a second person approving the deploy.",
+      "quoteSpan": [
+        274,
+        393
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "IAM-001"
+    ]
+  },
+  {
+    "id": "ob_care_team_access",
+    "title": "Restricted records limited to the care team",
+    "plainDescription": "Restricted patient records are only viewed by the care team.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_access_control",
+      "quote": "Restricted patient records may only be viewed by members of the care team.",
+      "quoteSpan": [
+        564,
+        638
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "HIPAA-001"
+    ]
+  },
+  {
+    "id": "ob_minimum_necessary",
+    "title": "Ask only for the records needed",
+    "plainDescription": "Staff request only the records the task in front of them needs.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_access_control",
+      "quote": "Staff must ask only for the records they need for the task in front of them.",
+      "quoteSpan": [
+        640,
+        716
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "HIPAA-001"
+    ]
+  },
+  {
+    "id": "ob_privileged_mfa",
+    "title": "Multi-factor on privileged accounts",
+    "plainDescription": "Every privileged account has multi-factor authentication switched on.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_access_control",
+      "quote": "Every privileged account must have multi-factor authentication enabled.",
+      "quoteSpan": [
+        804,
+        875
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_access_review",
+    "title": "Access review each January",
+    "plainDescription": "Review every system access list each January.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_access_control",
+      "quote": "Access reviews must be completed every January.",
+      "quoteSpan": [
+        1044,
+        1091
+      ]
+    },
+    "cadence": "annual",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_leaver_access",
+    "title": "Access removed within one business day",
+    "plainDescription": "A leaving person's access is removed within one business day.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_access_control",
+      "quote": "Access must be removed within one business day of a person leaving the firm.",
+      "quoteSpan": [
+        877,
+        953
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_structuring_pattern",
+    "title": "Report structuring patterns",
+    "plainDescription": "Deposits that stay just under the limit are reviewed and reported when they form a pattern.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_aml_procedure",
+      "quote": "Cash deposits that stay just under the reporting limit must be reviewed and reported when they form a pattern.",
+      "quoteSpan": [
+        274,
+        384
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "AML-001"
+    ]
+  },
+  {
+    "id": "ob_band_daily_review",
+    "title": "Daily review of the band",
+    "plainDescription": "Cash activity just under the limit is reviewed every working day.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_aml_procedure",
+      "quote": "Cash activity inside the just-under-limit band must be reviewed every working day.",
+      "quoteSpan": [
+        386,
+        468
+      ]
+    },
+    "cadence": "monthly",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "AML-001"
+    ]
+  },
+  {
+    "id": "ob_split_escalation",
+    "title": "Escalate split payments",
+    "plainDescription": "Any attempt to split a payment around a threshold is escalated.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_aml_procedure",
+      "quote": "Staff must escalate any attempt to split a payment to avoid a reporting threshold.",
+      "quoteSpan": [
+        586,
+        668
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "AML-001"
+    ]
+  },
+  {
+    "id": "ob_aml_annual_review",
+    "title": "Annual review of the AML procedure",
+    "plainDescription": "The AML procedure gets an independent review each February.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_aml_procedure",
+      "quote": "The annual independent review of this procedure must be completed each February.",
+      "quoteSpan": [
+        670,
+        750
+      ]
+    },
+    "cadence": "annual",
+    "dueOn": "2026-02-28",
+    "lastCompletedOn": "2026-02-20",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "review memo"
+    ]
+  },
+  {
+    "id": "ob_cdd_identification",
+    "title": "Identify customers before opening",
+    "plainDescription": "Customers are identified before an account is opened.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_aml_procedure",
+      "quote": "Customers must be identified before an account is opened.",
+      "quoteSpan": [
+        782,
+        839
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_sar_confidentiality",
+    "title": "Never disclose a report to its subject",
+    "plainDescription": "The subject of a suspicious activity report is never told about it.",
+    "kind": "prohibition",
+    "source": {
+      "documentId": "doc_aml_procedure",
+      "quote": "A suspicious activity report must never be disclosed to the subject of the report.",
+      "quoteSpan": [
+        864,
+        946
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_no_hardcoded_secrets",
+    "title": "No secrets in the repository",
+    "plainDescription": "Secrets and credentials are never committed to the repository.",
+    "kind": "prohibition",
+    "source": {
+      "documentId": "doc_secure_development",
+      "quote": "Secrets and credentials must never be committed to the repository.",
+      "quoteSpan": [
+        259,
+        325
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEV-001"
+    ]
+  },
+  {
+    "id": "ob_premerge_secret_scan",
+    "title": "Secret scan before the main branch",
+    "plainDescription": "Commits are scanned for hardcoded secrets before they reach the main branch.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_secure_development",
+      "quote": "Commits must be scanned for hardcoded secrets before they reach the main branch.",
+      "quoteSpan": [
+        327,
+        407
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEV-001"
+    ]
+  },
+  {
+    "id": "ob_pen_test",
+    "title": "Annual penetration test",
+    "plainDescription": "Commission an independent penetration test of customer-facing systems once a year.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_secure_development",
+      "quote": "Customer-facing systems must undergo an independent penetration test at least annually.",
+      "quoteSpan": [
+        424,
+        511
+      ]
+    },
+    "cadence": "annual",
+    "dueOn": "2026-03-10",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "penetration test report"
+    ]
+  },
+  {
+    "id": "ob_deps_scan",
+    "title": "Weekly dependency scan",
+    "plainDescription": "Dependencies are scanned for known vulnerabilities every week.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_secure_development",
+      "quote": "Dependencies must be scanned for known vulnerabilities every week.",
+      "quoteSpan": [
+        606,
+        672
+      ]
+    },
+    "dueOn": "2026-03-27",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "scan report"
+    ]
+  },
+  {
+    "id": "ob_dr_test",
+    "title": "Disaster recovery test each June",
+    "plainDescription": "Disaster recovery tests run each June and the results are filed.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_secure_development",
+      "quote": "Disaster recovery tests must be run each June and the results must be filed.",
+      "quoteSpan": [
+        825,
+        901
+      ]
+    },
+    "cadence": "annual",
+    "dueOn": "2026-06-30",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ],
+    "evidenceRequired": [
+      "test report"
+    ]
+  },
+  {
+    "id": "ob_code_review",
+    "title": "Second engineer reviews every change",
+    "plainDescription": "A second engineer reviews every change to production code.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_secure_development",
+      "quote": "All changes to production code must be reviewed by a second engineer.",
+      "quoteSpan": [
+        754,
+        823
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_expense_receipts",
+    "title": "Receipt for USD 75 or more",
+    "plainDescription": "Expenses of USD 75 or more come with a receipt.",
+    "kind": "threshold",
+    "source": {
+      "documentId": "doc_travel_expense",
+      "quote": "Expenses of USD 75 or more must be supported by a receipt.",
+      "quoteSpan": [
+        229,
+        287
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_expense_submission",
+    "title": "Claims within 30 days",
+    "plainDescription": "Expense claims are submitted within 30 days of the spend.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_travel_expense",
+      "quote": "Expense claims must be submitted within 30 days of the spend.",
+      "quoteSpan": [
+        289,
+        350
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_expense_manager_approval",
+    "title": "Manager approves before reimbursement",
+    "plainDescription": "A manager approves every expense claim before money goes out.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_travel_expense",
+      "quote": "A manager must approve every expense claim before reimbursement.",
+      "quoteSpan": [
+        437,
+        501
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  },
+  {
+    "id": "ob_expense_monthly_close",
+    "title": "Close expense reports by the 10th",
+    "plainDescription": "The previous month's expense reports are closed by the 10th.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_travel_expense",
+      "quote": "Expense reports for the previous month must be closed by the 10th.",
+      "quoteSpan": [
+        595,
+        661
+      ]
+    },
+    "cadence": "monthly",
+    "dueOn": "2026-04-10",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_expense_acknowledgement",
+    "title": "Expense policy acknowledgement each January",
+    "plainDescription": "Everyone acknowledges the expense policy each January.",
+    "kind": "recurring",
+    "source": {
+      "documentId": "doc_travel_expense",
+      "quote": "Every member of staff must acknowledge the expense policy each January.",
+      "quoteSpan": [
+        663,
+        734
+      ]
+    },
+    "cadence": "annual",
+    "dueOn": "2026-01-31",
+    "lastCompletedOn": "2026-01-25",
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": [
+      "DEAD-001"
+    ]
+  },
+  {
+    "id": "ob_mileage_log",
+    "title": "Mileage needs a logged journey",
+    "plainDescription": "Mileage claims come with a logged journey.",
+    "kind": "requirement",
+    "source": {
+      "documentId": "doc_travel_expense",
+      "quote": "Mileage is paid at the standard rate and requires a logged journey.",
+      "quoteSpan": [
+        352,
+        419
+      ]
+    },
+    "status": "confirmed",
+    "origin": "manual",
+    "ruleIds": []
+  }
+]

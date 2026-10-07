@@ -1,0 +1,22 @@
+<svg width="180" height="180" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="apple-seal-bg" x1="4" y1="4" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stopColor="#1E2A38" />
+      <stop offset="1" stopColor="#0F1722" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="#0F1722" />
+  <circle cx="24" cy="24" r="21" fill="url(#apple-seal-bg)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" />
+  <circle cx="24" cy="24" r="18" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2 1.5" />
+  <circle cx="24" cy="6" r="1.2" fill="#F59E0B" />
+  <circle cx="42" cy="24" r="1.2" fill="#F59E0B" />
+  <circle cx="24" cy="42" r="1.2" fill="#F59E0B" />
+  <circle cx="6" cy="24" r="1.2" fill="#F59E0B" />
+  <path d="M 24 6 C 24 10, 27 15, 27 21 C 27 27, 22 31, 22 35 C 22 39, 25 42, 27 42" stroke="#0D9488" stroke-width="2" stroke-linecap="round" fill="none" />
+  <path d="M 28 27 L 37 36 C 38 37, 36.5 39, 34.5 37.5 L 26 29" fill="#0D9488" />
+  <circle cx="35" cy="35" r="1.5" fill="#F59E0B" />
+  <path d="M 33.5 16.5 C 32 14, 29 11.5, 24 11.5 C 16.8 11.5, 12 17, 12 24 C 12 31, 16.8 36.5, 24 36.5 C 29.5 36.5, 32.5 33.5, 34 30.5 L 30.8 29.5 C 29.5 31.8, 27.2 33.2, 24 33.2 C 18.8 33.2, 15.6 28.8, 15.6 24 C 15.6 19.2, 18.8 14.8, 24 14.8 C 27.2 14.8, 29.2 16.2, 30.6 18.2 Z" fill="#F4F1EA" />
+  <path d="M 31 13.5 L 35.5 15.5 L 32.5 18 Z" fill="#F4F1EA" />
+  <circle cx="25" cy="23.5" r="3.5" fill="#F59E0B" stroke="#0F1722" stroke-width="1" />
+  <circle cx="25" cy="23.5" r="1.25" fill="#0F1722" />
+</svg>

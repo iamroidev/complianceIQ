@@ -1,0 +1,72 @@
+{
+  "id": "structured-deposits",
+  "title": "Structuring: deposits just under the reporting limit",
+  "ruleId": "AML-001",
+  "domain": "identity",
+  "note": "USD 9,800 then USD 9,400, 34 hours apart — both inside the band, together over the limit (MASTER §7.8).",
+  "steps": [
+    {
+      "kind": "event",
+      "event": {
+        "id": "evt_2026-01-10T09:00:00.000Z_9800",
+        "domain": "identity",
+        "actor": { "id": "p_kofi", "name": "Kofi Adjei-Boateng", "role": "Treasury manager" },
+        "action": "cash_deposit",
+        "resource": { "type": "account", "id": "acc_1", "label": "Operating account" },
+        "context": { "amount": 9800, "currency": "USD" },
+        "timestamp": "2026-01-10T09:00:00.000Z",
+        "source": "treasury-system"
+      }
+    },
+    {
+      "kind": "event",
+      "event": {
+        "id": "evt_2026-01-11T19:00:00.000Z_9400",
+        "domain": "identity",
+        "actor": { "id": "p_kofi", "name": "Kofi Adjei-Boateng", "role": "Treasury manager" },
+        "action": "cash_deposit",
+        "resource": { "type": "account", "id": "acc_1", "label": "Operating account" },
+        "context": { "amount": 9400, "currency": "USD" },
+        "timestamp": "2026-01-11T19:00:00.000Z",
+        "source": "treasury-system"
+      }
+    }
+  ],
+  "expected": {
+    "opened": [{ "ruleId": "AML-001", "subjectId": "p_kofi" }],
+    "resolved": []
+  },
+  "twin": {
+    "title": "Negative control: the same two deposits, 49 hours apart",
+    "note": "The second deposit falls outside the 48-hour rolling window, so no alert may fire.",
+    "steps": [
+      {
+        "kind": "event",
+        "event": {
+          "id": "evt_2026-01-10T09:00:00.000Z_9800",
+          "domain": "identity",
+          "actor": { "id": "p_kofi", "name": "Kofi Adjei-Boateng", "role": "Treasury manager" },
+          "action": "cash_deposit",
+          "resource": { "type": "account", "id": "acc_1", "label": "Operating account" },
+          "context": { "amount": 9800, "currency": "USD" },
+          "timestamp": "2026-01-10T09:00:00.000Z",
+          "source": "treasury-system"
+        }
+      },
+      {
+        "kind": "event",
+        "event": {
+          "id": "evt_2026-01-12T10:00:00.000Z_9400",
+          "domain": "identity",
+          "actor": { "id": "p_kofi", "name": "Kofi Adjei-Boateng", "role": "Treasury manager" },
+          "action": "cash_deposit",
+          "resource": { "type": "account", "id": "acc_1", "label": "Operating account" },
+          "context": { "amount": 9400, "currency": "USD" },
+          "timestamp": "2026-01-12T10:00:00.000Z",
+          "source": "treasury-system"
+        }
+      }
+    ],
+    "expected": { "opened": [], "resolved": [] }
+  }
+}

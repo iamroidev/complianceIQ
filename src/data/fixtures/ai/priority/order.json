@@ -1,0 +1,26 @@
+{
+  "alertIds": ["alrt_1", "alrt_3", "alrt_5"],
+  "order": [
+    {
+      "alertId": "alrt_3",
+      "reason": "Regulatory deadline is 9 days away and no completion evidence is recorded.",
+      "citedFacts": [
+        "Annual penetration test is due in 9 days, on 10 Mar 2026. No completion evidence recorded."
+      ]
+    },
+    {
+      "alertId": "alrt_5",
+      "reason": "High-severity vendor document gap with the earliest review deadline.",
+      "citedFacts": [
+        "Meridian Freight Ltd is missing a required SOC 2 report. Critical-tier vendors must hold a current SOC 2 report."
+      ]
+    },
+    {
+      "alertId": "alrt_1",
+      "reason": "Missing required certificate, risk score 25.",
+      "citedFacts": [
+        "Nana Adjeiwaa has no Security awareness certificate on file. The role requires it."
+      ]
+    }
+  ]
+}

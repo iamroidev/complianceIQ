@@ -1,0 +1,75 @@
+[
+  {
+    "id": "cert_ama_firstaid",
+    "personId": "p_ama",
+    "type": "First Aid",
+    "issuer": "St John Ambulance",
+    "issuedOn": "2024-03-15",
+    "expiresOn": "2026-03-15"
+  },
+  {
+    "id": "cert_kwesi_firstaid",
+    "personId": "p_kwesi",
+    "type": "First Aid",
+    "issuer": "St John Ambulance",
+    "issuedOn": "2025-01-31",
+    "expiresOn": "2027-01-31"
+  },
+  {
+    "id": "cert_kofi_aml",
+    "personId": "p_kofi",
+    "type": "AML training",
+    "issuer": "Financial Conduct Academy",
+    "issuedOn": "2024-08-01",
+    "expiresOn": "2026-08-01"
+  },
+  {
+    "id": "cert_kofi_security",
+    "personId": "p_kofi",
+    "type": "Security awareness",
+    "issuedOn": "2025-11-30",
+    "expiresOn": "2026-11-30"
+  },
+  {
+    "id": "cert_ama_security",
+    "personId": "p_ama",
+    "type": "Security awareness",
+    "issuedOn": "2025-10-31",
+    "expiresOn": "2026-10-31"
+  },
+  {
+    "id": "cert_rmensah_security",
+    "personId": "p_rmensah",
+    "type": "Security awareness",
+    "issuedOn": "2025-09-30",
+    "expiresOn": "2026-09-30"
+  },
+  {
+    "id": "cert_owusu_security",
+    "personId": "p_owusu",
+    "type": "Security awareness",
+    "issuedOn": "2025-06-30",
+    "expiresOn": "2026-06-30"
+  },
+  {
+    "id": "cert_kwesi_security",
+    "personId": "p_kwesi",
+    "type": "Security awareness",
+    "issuedOn": "2025-08-15",
+    "expiresOn": "2026-08-15"
+  },
+  {
+    "id": "cert_efua_security",
+    "personId": "p_efua",
+    "type": "Security awareness",
+    "issuedOn": "2025-07-31",
+    "expiresOn": "2026-07-31"
+  },
+  {
+    "id": "cert_daniel_security",
+    "personId": "p_daniel",
+    "type": "Security awareness",
+    "issuedOn": "2025-05-31",
+    "expiresOn": "2026-05-31"
+  }
+]

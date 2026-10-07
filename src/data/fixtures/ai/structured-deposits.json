@@ -1,0 +1,62 @@
+{
+  "scenarioId": "structured-deposits",
+  "ruleId": "AML-001",
+  "subjectId": "p_kofi",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Kofi Adjei-Boateng made 2 cash deposits of USD 9,800.00 and USD 9,400.00 within 34 hours, each just under the USD 10,000 reporting limit. Both deposits land inside the just-under-limit band and push the total over the limit inside the rolling window.",
+      "citations": ["doc_aml_procedure#sec-2", "cl_31usc_5324"],
+      "evidenceRefs": [
+        { "type": "event", "id": "evt_2026-01-10T09:00:00.000Z_9800" },
+        { "type": "event", "id": "evt_2026-01-11T19:00:00.000Z_9400" },
+        { "type": "evidence", "id": "ev_0" }
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "Same subject makes at least two cash deposits each inside the just-under-limit band, cumulatively over the limit, within the rolling window. The internal procedure says cash deposits that stay just under the reporting limit must be reviewed and reported when they form a pattern.",
+      "citations": ["cl_31usc_5324", "doc_aml_procedure#sec-2"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "sar",
+    "paragraphs": [
+      {
+        "heading": "Subject",
+        "text": "Kofi Adjei-Boateng (p_kofi) in the identity domain is the subject of this report.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Chronology",
+        "text": "Kofi Adjei-Boateng made 2 cash deposits of USD 9,800.00 and USD 9,400.00 within 34 hours, each just under the USD 10,000 reporting limit. The deposits total USD 19,200 inside the 48-hour rolling window.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Deviation from baseline",
+        "text": "Same subject makes at least two cash deposits each inside the just-under-limit band, cumulatively over the limit, within the rolling window. Cash deposits that stay just under the reporting limit must be reviewed and reported when they form a pattern.",
+        "citations": ["doc_aml_procedure#sec-2"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Evidence attached",
+        "text": "Snapshot ev_0 holds the register rows behind this finding. The two deposit events are attached to the alert.",
+        "citations": [],
+        "evidenceRefs": [
+          { "type": "event", "id": "evt_2026-01-10T09:00:00.000Z_9800" },
+          { "type": "event", "id": "evt_2026-01-11T19:00:00.000Z_9400" },
+          { "type": "evidence", "id": "ev_0" }
+        ]
+      },
+      {
+        "heading": "Recommendation",
+        "text": "Review this high-severity draft before any submission; the response is due by Mar 2, 09:00. Prepare the chronology for officer review.",
+        "citations": [],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

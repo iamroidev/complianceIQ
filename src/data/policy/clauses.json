@@ -1,0 +1,122 @@
+[
+  {
+    "chunkId": "cl_31cfr_1020_320",
+    "documentId": "reg_31cfr",
+    "regulation": "31 CFR",
+    "citation": "\u00a7 1020.320",
+    "title": "Reports of suspicious transactions",
+    "textKind": "summary",
+    "text": "A bank must report a suspicious transaction of USD 5,000 or more when it knows, suspects or has reason to suspect that the transaction involves funds derived from illegal activity, is designed to evade the requirements of the Bank Secrecy Act, has no business or apparent lawful purpose, or otherwise involves no apparent lawful purpose and the bank knows of no reasonable explanation for it. The report must be filed no later than 30 calendar days after the date of initial detection of facts that may constitute a basis for filing.",
+    "sourceUrl": "https://www.ecfr.gov/current/title-31/section-1020.320"
+  },
+  {
+    "chunkId": "cl_31cfr_1010_311",
+    "documentId": "reg_31cfr",
+    "regulation": "31 CFR",
+    "citation": "\u00a7 1010.311",
+    "title": "Reports of transactions in currency",
+    "textKind": "summary",
+    "text": "A financial institution must file a currency transaction report for each transaction in currency of more than USD 10,000, and for multiple currency transactions conducted by or on behalf of the same person in one business day that total more than USD 10,000.",
+    "sourceUrl": "https://www.ecfr.gov/current/title-31/section-1010.311"
+  },
+  {
+    "chunkId": "cl_31usc_5324",
+    "documentId": "reg_31usc",
+    "regulation": "31 U.S.C.",
+    "citation": "\u00a7 5324",
+    "title": "Structuring transactions to evade reporting requirements prohibited",
+    "textKind": "summary",
+    "text": "No person may structure, assist in structuring, or attempt to structure any transaction with any domestic financial institution for the purpose of evading any reporting requirement under the Bank Secrecy Act or any regulation prescribed under it. A transaction is structured if it involves one or more currency transactions in any amount that in some way evade such a reporting requirement, whether or not the person knew the reporting requirement applied.",
+    "sourceUrl": "https://www.law.cornell.edu/uscode/text/31/5324"
+  },
+  {
+    "chunkId": "cl_45cfr_164_502_b",
+    "documentId": "reg_45cfr_502",
+    "regulation": "45 CFR",
+    "citation": "\u00a7 164.502(b)",
+    "title": "Minimum necessary standard",
+    "textKind": "verbatim",
+    "text": "When using or disclosing protected health information or when requesting protected health information from another covered entity or business associate, a covered entity or business associate must make reasonable efforts to limit protected health information to the minimum necessary to accomplish the intended purpose of the use, disclosure, or request.",
+    "sourceUrl": "https://www.ecfr.gov/current/title-45/section-164.502"
+  },
+  {
+    "chunkId": "cl_45cfr_164_402",
+    "documentId": "reg_45cfr_402",
+    "regulation": "45 CFR",
+    "citation": "\u00a7 164.402",
+    "title": "Definition of breach",
+    "textKind": "summary",
+    "text": "An impermissible acquisition, access, use or disclosure of protected health information under the Privacy Rule is presumed to be a breach unless the covered entity or business associate demonstrates a low probability that the protected health information has been compromised, based on a risk assessment of at least the nature and extent of the information involved, the unauthorised person who used or received the information, whether the information was actually acquired or viewed, and the extent to which the risk has been mitigated.",
+    "sourceUrl": "https://www.ecfr.gov/current/title-45/section-164.402"
+  },
+  {
+    "chunkId": "cl_soc2_cc6_1",
+    "documentId": "reg_soc2",
+    "regulation": "SOC 2",
+    "citation": "CC6.1",
+    "title": "Logical access security software, infrastructure and architectures",
+    "textKind": "summary",
+    "text": "The entity implements logical access security software, infrastructure and architectures over protected information assets to protect them from security events such as unauthorised access.",
+    "sourceUrl": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+  },
+  {
+    "chunkId": "cl_soc2_cc6_3",
+    "documentId": "reg_soc2",
+    "regulation": "SOC 2",
+    "citation": "CC6.3",
+    "title": "Role-based access and segregation of duties",
+    "textKind": "summary",
+    "text": "The entity authorises, modifies or removes access to data, software and functions based on the roles of authorised users, enforcing least privilege and segregation of duties so that no individual holds an incompatible combination of access rights.",
+    "sourceUrl": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+  },
+  {
+    "chunkId": "cl_soc2_cc6_8",
+    "documentId": "reg_soc2",
+    "regulation": "SOC 2",
+    "citation": "CC6.8",
+    "title": "Protection against malicious software",
+    "textKind": "summary",
+    "text": "The entity implements controls to prevent or detect the introduction, execution and spread of unauthorised or malicious software, for example through endpoint protection, monitoring of software delivery paths and controlled installation of software.",
+    "sourceUrl": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+  },
+  {
+    "chunkId": "cl_nist_ac_2",
+    "documentId": "reg_nist",
+    "regulation": "NIST SP 800-53",
+    "citation": "AC-2",
+    "title": "Account Management",
+    "textKind": "summary",
+    "text": "The organisation manages information system accounts: identifying account types, establishing conditions for group and role membership, assigning account managers, approving and creating accounts, monitoring account use, disabling accounts that are inactive or unauthorised, and reviewing accounts for appropriateness.",
+    "sourceUrl": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+  },
+  {
+    "chunkId": "cl_nist_ac_5",
+    "documentId": "reg_nist",
+    "regulation": "NIST SP 800-53",
+    "citation": "AC-5",
+    "title": "Separation of Duties",
+    "textKind": "summary",
+    "text": "Individuals with defined roles separate duties so that no single individual can carry out critical security functions or incompatible parts of a business process alone; dual control or job rotation may be used where separation is impractical.",
+    "sourceUrl": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+  },
+  {
+    "chunkId": "cl_nist_sa_11",
+    "documentId": "reg_nist",
+    "regulation": "NIST SP 800-53",
+    "citation": "SA-11",
+    "title": "Developer Testing and Evaluation",
+    "textKind": "summary",
+    "text": "The developer designs, develops and implements a plan for testing and evaluation of the information system throughout the development lifecycle, performs functional, performance and security testing, and documents the results.",
+    "sourceUrl": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+  },
+  {
+    "chunkId": "cl_nist_ia_5_7",
+    "documentId": "reg_nist",
+    "regulation": "NIST SP 800-53",
+    "citation": "IA-5(7)",
+    "title": "No Embedded Unencrypted Static Authenticators",
+    "textKind": "verbatim",
+    "text": "Ensure that unencrypted static authenticators are not embedded in applications or other forms of static storage.",
+    "sourceUrl": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+  }
+]

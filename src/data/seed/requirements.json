@@ -1,0 +1,23 @@
+[
+  {
+    "id": "req_clinical_firstaid",
+    "appliesTo": { "department": "Clinical" },
+    "certType": "First Aid",
+    "criticality": "high",
+    "obligationId": "ob_firstaid_renewal"
+  },
+  {
+    "id": "req_treasury_aml",
+    "appliesTo": { "role": "Treasury manager" },
+    "certType": "AML training",
+    "criticality": "high",
+    "obligationId": "ob_aml_training"
+  },
+  {
+    "id": "req_all_security",
+    "appliesTo": {},
+    "certType": "Security awareness",
+    "criticality": "standard",
+    "obligationId": "ob_security_awareness"
+  }
+]

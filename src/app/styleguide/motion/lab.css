@@ -1,0 +1,1559 @@
+/* ============================================================
+   Motion lab — /styleguide/motion (DESIGN.md §17)
+   Every demo rests in its FINAL state; the Replay button (or
+   "Play all") remounts the stage so CSS animations re-run from
+   their from-state. Reduced motion: globals.css turns every
+   animation inside a playing stage into a 150ms opacity fade and
+   caps transitions to colour/opacity at 150ms (transform
+   transitions fall back to instant).
+   ============================================================ */
+
+/* ── Page chrome ── */
+.ml-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
+}
+
+.ml-sec {
+  margin-top: 56px;
+}
+
+.ml-sec-h {
+  font-size: var(--fs-title);
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 6px;
+}
+
+.ml-sec-p {
+  color: var(--text-2);
+  max-width: var(--max-prose);
+  margin-bottom: 24px;
+}
+
+.ml-rules {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.ml-rules li {
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-container);
+  color: var(--text-2);
+  font-size: var(--fs-base);
+}
+
+.ml-rules li strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Card ── */
+.ml-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-container);
+  min-width: 0;
+}
+
+.ml-card-wide {
+  grid-column: 1 / -1;
+}
+
+.ml-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ml-card-title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  line-height: var(--lh-base);
+}
+
+.ml-card-spec {
+  font-size: var(--fs-label);
+  line-height: 17px;
+  color: var(--text-3);
+  max-width: 62ch;
+}
+
+.ml-replay {
+  flex-shrink: 0;
+  min-height: 28px;
+  padding: 0 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ml-replay:hover {
+  background: var(--line);
+}
+
+.ml-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 176px;
+  padding: 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  overflow: hidden;
+}
+
+.ml-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ── Keyframes ── */
+@keyframes mlTrack {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(284px);
+  }
+}
+
+@keyframes mlSealStamp {
+  0% {
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mlDraw {
+  from {
+    stroke-dashoffset: 1;
+  }
+}
+
+@keyframes mlPulse {
+  0%,
+  36% {
+    background-color: var(--surface);
+  }
+  42% {
+    background-color: rgba(199, 122, 18, 0.2);
+  }
+  100% {
+    background-color: var(--surface);
+  }
+}
+
+@keyframes mlTick {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes mlProgress {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes mlTear {
+  from {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes mlLinkIntact {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mlCritical {
+  from {
+    color: var(--text-2);
+  }
+  to {
+    color: var(--critical);
+  }
+}
+
+@keyframes mlFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mlAlertRow {
+  from {
+    grid-template-rows: minmax(0, 0fr);
+  }
+}
+
+@keyframes mlHighlight {
+  from {
+    background-color: rgba(199, 122, 18, 0.2);
+  }
+  to {
+    background-color: var(--surface);
+  }
+}
+
+@keyframes mlRise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes mlBtnPress {
+  0% {
+    background-color: var(--cta-solid);
+    transform: translateY(0);
+  }
+  30% {
+    background-color: color-mix(in srgb, var(--cta-solid) 82%, #000);
+  }
+  55% {
+    transform: translateY(1px);
+  }
+  100% {
+    background-color: var(--cta-solid);
+    transform: translateY(0);
+  }
+}
+
+@keyframes mlMaskRise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@keyframes mlRevealRise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes mlSheetDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-48px);
+  }
+}
+
+@keyframes mlHeroSeal {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes mlChainIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes mlStripPull {
+  from {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes mlTogglePop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@keyframes mlBarFill {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes mlFanA {
+  from {
+    transform: rotate(0deg) translateY(40px);
+  }
+  to {
+    transform: rotate(-18deg);
+  }
+}
+
+@keyframes mlFanB {
+  from {
+    transform: rotate(0deg) translateY(40px);
+  }
+  to {
+    transform: rotate(-7deg);
+  }
+}
+
+@keyframes mlFanC {
+  from {
+    transform: rotate(0deg) translateY(40px);
+  }
+  to {
+    transform: rotate(7deg);
+  }
+}
+
+@keyframes mlFanD {
+  from {
+    transform: rotate(0deg) translateY(40px);
+  }
+  to {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes mlShimmer {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+/* ── Tokens: easing tracks ── */
+.ml-token {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ml-token-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ml-token-name,
+.ml-token-val {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.ml-token-name {
+  color: var(--text-2);
+}
+
+.ml-rail {
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  height: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+
+.ml-dot {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ── Signature: the seal ── */
+.ml-seal-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ml-seal-wrap {
+  display: inline-flex;
+}
+
+.ml-play .ml-seal-wrap {
+  animation: mlSealStamp 360ms var(--ease-spring) backwards;
+}
+
+.ml-seal-caption {
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--verified);
+  margin: 0;
+}
+
+.ill-seal-check {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+.ml-play .ill-seal-check {
+  animation: mlDraw 240ms linear 200ms backwards;
+}
+
+.ml-play .ml-seal-caption {
+  animation: mlFade 160ms linear 440ms backwards;
+}
+
+/* ── Signature: the thread ── */
+.ml-thread-demo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.ml-thread-src {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--fs-label);
+}
+
+.ml-thread-svg {
+  flex-shrink: 0;
+}
+
+.ml-play .ml-thread-svg path {
+  animation: mlDraw 420ms linear backwards;
+}
+
+.ml-thread-row {
+  flex-shrink: 0;
+  padding: 6px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+.ml-play .ml-thread-row {
+  animation: mlPulse 1000ms linear backwards;
+}
+
+/* ── Signature: tamper check ── */
+.ml-tamper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.ml-tl-wrap {
+  position: relative;
+}
+
+.ml-tl {
+  margin: 0;
+  padding: 0 0 0 22px;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.ml-tl-progress {
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  bottom: 2px;
+  width: 2px;
+  background: var(--verified);
+  transform-origin: top center;
+}
+
+.ml-play .ml-tl-progress {
+  animation: mlProgress 240ms linear backwards;
+}
+
+.ml-tl-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+.ml-tl-item.is-critical {
+  color: var(--critical);
+}
+
+.ml-play .ml-tl-item.is-critical {
+  animation: mlCritical 160ms linear backwards;
+}
+
+.ml-tl-item:nth-child(3).is-critical {
+  animation-delay: 540ms;
+}
+
+.ml-tl-item:nth-child(4).is-critical {
+  animation-delay: 580ms;
+}
+
+.ml-tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--verified);
+  color: var(--surface);
+  font-size: 9px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ml-play .ml-tick {
+  animation: mlTick 80ms linear backwards;
+}
+
+.ml-play .ml-tl-item:nth-child(1) .ml-tick {
+  animation-delay: 0ms;
+}
+
+.ml-play .ml-tl-item:nth-child(2) .ml-tick {
+  animation-delay: 60ms;
+}
+
+.ml-play .ml-tl-item:nth-child(3) .ml-tick {
+  animation-delay: 120ms;
+}
+
+.ml-play .ml-tl-item:nth-child(4) .ml-tick {
+  animation-delay: 180ms;
+}
+
+.ml-tamper-bottom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ml-link-rip {
+  position: relative;
+  width: 72px;
+  height: 56px;
+  flex-shrink: 0;
+  transform: translateX(8px) rotate(6deg);
+}
+
+.ml-play .ml-link-rip {
+  animation: mlTear 300ms var(--ease-out) 240ms backwards;
+}
+
+.ml-link-rip > span {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ml-link-intact {
+  opacity: 0;
+}
+
+.ml-play .ml-link-intact {
+  animation: mlLinkIntact 160ms linear 240ms backwards;
+}
+
+.ml-link-torn {
+  opacity: 1;
+}
+
+.ml-play .ml-link-torn {
+  animation: mlFade 160ms linear 380ms backwards;
+}
+
+.ml-result {
+  margin: 0;
+  font-size: var(--fs-label);
+  font-weight: 600;
+  color: var(--critical);
+  max-width: 46ch;
+}
+
+.ml-play .ml-result {
+  animation: mlFade 160ms linear 860ms backwards;
+}
+
+/* ── Signature: time slide ── */
+.ml-time {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.ml-time-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.ml-date {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.ml-strip-row {
+  display: grid;
+  grid-template-columns: 168px 1fr 72px;
+  align-items: center;
+  gap: 10px;
+}
+
+.ml-strip-label {
+  font-size: var(--fs-label);
+  color: var(--text-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ml-strip-rail {
+  position: relative;
+  height: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+
+.ml-today {
+  position: absolute;
+  left: 80px;
+  top: -5px;
+  bottom: -5px;
+  border-left: 2px dashed var(--text-3);
+}
+
+.ml-today::after {
+  content: "today";
+  position: absolute;
+  top: 16px;
+  left: -14px;
+  font-size: 9px;
+  color: var(--text-3);
+}
+
+.ml-marker {
+  position: absolute;
+  top: -1px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+}
+
+.ml-marker.is-cert {
+  transform: translateX(0);
+}
+
+.ml-play .ml-marker.is-cert {
+  animation: mlSlideFrom240 900ms var(--ease-in-out) backwards;
+}
+
+.ml-marker.is-deadline {
+  transform: translateX(120px);
+}
+
+.ml-play .ml-marker.is-deadline {
+  animation: mlSlideFrom260 900ms var(--ease-in-out) backwards;
+}
+
+@keyframes mlSlideFrom240 {
+  from {
+    transform: translateX(240px);
+  }
+}
+
+@keyframes mlSlideFrom260 {
+  from {
+    transform: translateX(260px);
+  }
+}
+
+.ml-exp {
+  position: relative;
+  display: inline-block;
+  min-width: 64px;
+}
+
+.ml-exp-valid {
+  opacity: 0;
+}
+
+.ml-play .ml-exp-valid {
+  animation: mlFadeOut 160ms linear 740ms backwards;
+}
+
+.ml-exp-fired {
+  position: absolute;
+  inset: 0;
+  font-size: var(--fs-label);
+  font-weight: 700;
+  color: var(--critical);
+}
+
+.ml-play .ml-exp-fired {
+  animation: mlFade 160ms linear 740ms backwards;
+}
+
+/* ── Product: alert arrives ── */
+.ml-alerts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.ml-alert-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  padding: 8px 12px;
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+.ml-alert-new {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.ml-alert-new > div {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ml-play .ml-alert-new {
+  animation: mlAlertRow 200ms var(--ease-out) backwards;
+}
+
+.ml-play .ml-alert-new > div {
+  animation: mlHighlight 1200ms linear backwards;
+}
+
+.ml-dot-sev {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ml-dot-sev.is-critical {
+  background: var(--critical);
+}
+
+.ml-dot-sev.is-medium {
+  background: var(--medium);
+}
+
+.ml-dot-sev.is-verified {
+  background: var(--verified);
+}
+
+.ml-alert-meta {
+  margin-left: auto;
+  color: var(--text-3);
+}
+
+/* ── Product: open case ── */
+.ml-case {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.ml-case-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+.ml-case-row.is-active {
+  border-color: var(--accent);
+}
+
+.ml-case-detail {
+  padding: 10px 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+.ml-play .ml-case-detail {
+  animation: mlRise 160ms var(--ease-out) backwards;
+}
+
+/* ── Product: tabs ── */
+.ml-tabs {
+  position: relative;
+  display: inline-flex;
+  border-bottom: 1px solid var(--line);
+  align-self: flex-start;
+}
+
+.ml-tab {
+  width: 96px;
+  min-height: 34px;
+  background: none;
+  border: none;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  color: var(--text-3);
+  cursor: pointer;
+  padding: 0;
+}
+
+.ml-tab[aria-selected="true"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.ml-tabs-ul {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 96px;
+  height: 2px;
+  background: var(--accent);
+  transition: transform 200ms var(--ease-out);
+}
+
+.ml-tabpanel {
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+/* ── Product: drawer ── */
+.ml-drawer-stage {
+  position: relative;
+  width: 100%;
+  min-height: 184px;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  overflow: hidden;
+}
+
+.ml-drawer-list {
+  display: grid;
+  gap: 6px;
+  max-width: 55%;
+}
+
+.ml-drawer-line {
+  height: 10px;
+  border-radius: 2px;
+  background: var(--surface-2);
+}
+
+.ml-drawer-open-btn {
+  margin-top: 10px;
+  min-height: 28px;
+  padding: 0 10px;
+  background: var(--accent);
+  color: var(--on-accent);
+  border: none;
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ml-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 240px;
+  padding: 12px;
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  box-shadow: -8px 0 24px rgba(18, 38, 63, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateX(0);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.ml-drawer.is-closed {
+  transform: translateX(100%);
+}
+
+.ml-play .ml-drawer {
+  animation: mlDrawerIn 240ms var(--ease-out) backwards;
+}
+
+@keyframes mlDrawerIn {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+.ml-drawer h4 {
+  margin: 0;
+  font-size: var(--fs-label);
+  font-weight: 600;
+}
+
+.ml-drawer p {
+  margin: 0;
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+.ml-drawer-close {
+  align-self: flex-start;
+  min-height: 26px;
+  padding: 0 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  cursor: pointer;
+}
+
+.ml-drawer-close:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Product: numbers ── */
+.ml-num-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.ml-num {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.ml-num-label {
+  font-size: var(--fs-label);
+  color: var(--text-3);
+}
+
+/* ── Product: skeleton ── */
+.ml-skel-panel {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+}
+
+.ml-skel-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ml-skel {
+  background: var(--surface-2);
+  border-radius: 3px;
+  animation: mlShimmer 1.4s ease-in-out infinite;
+}
+
+.ml-skel.is-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ml-skel.is-line {
+  height: 10px;
+}
+
+.ml-skel.is-w40 {
+  width: 40%;
+}
+
+/* ── Product: toggles ── */
+.ml-seg {
+  position: relative;
+  display: inline-flex;
+  padding: 3px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+}
+
+.ml-seg-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 76px;
+  bottom: 3px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  transition: transform 160ms var(--ease-spring);
+}
+
+.ml-seg-btn {
+  position: relative;
+  z-index: 1;
+  width: 76px;
+  min-height: 28px;
+  background: none;
+  border: none;
+  font-size: var(--fs-label);
+  font-weight: 500;
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+.ml-seg-btn[aria-pressed="true"] {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ── Product: buttons ── */
+.ml-btn-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ml-btn-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.ml-btn-cell span {
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.ml-btn {
+  min-height: 32px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ml-btn-primary {
+  background: var(--cta-solid);
+  color: var(--on-cta);
+}
+
+.ml-play .ml-btn-primary {
+  animation: mlBtnPress 300ms var(--ease-out) backwards;
+}
+
+.ml-btn-secondary {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--line);
+  transition: background-color var(--dur-instant) linear;
+}
+
+.ml-btn-secondary:hover {
+  background: var(--surface-2);
+}
+
+.ml-btn-fakefocus {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--line);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Landing: headline ── */
+.ml-headline {
+  margin: 0;
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 400;
+  color: var(--text);
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+}
+
+.ml-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+
+.ml-line-in {
+  display: inline-block;
+}
+
+.ml-play .ml-line-in {
+  animation: mlMaskRise 700ms var(--ease-out) backwards;
+}
+
+.ml-play .ml-line:nth-child(2) .ml-line-in {
+  animation-delay: 80ms;
+}
+
+.ml-em {
+  position: relative;
+  font-style: italic;
+}
+
+.ml-underline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 8px;
+  overflow: visible;
+}
+
+.ml-underline path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+.ml-play .ml-underline path {
+  animation: mlDraw 600ms linear 500ms backwards;
+}
+
+/* ── Landing: hero assembly ── */
+.ml-play [data-hero-sheet] {
+  animation: mlSheetDrop 500ms var(--ease-out) backwards;
+}
+
+.ml-play [data-hero-sheet="1"] {
+  animation-delay: 90ms;
+}
+
+.ml-play [data-hero-sheet="2"] {
+  animation-delay: 180ms;
+}
+
+.ml-play #hero-thread {
+  animation: mlDraw 1.2s linear 200ms backwards;
+}
+
+#hero-seal {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.ml-play #hero-seal {
+  animation: mlHeroSeal 360ms var(--ease-spring) 900ms backwards;
+}
+
+.ml-play [data-hero-link] {
+  animation: mlChainIn 260ms var(--ease-out) backwards;
+}
+
+.ml-play [data-hero-link="0"] {
+  animation-delay: 950ms;
+}
+
+.ml-play [data-hero-link="1"] {
+  animation-delay: 980ms;
+}
+
+.ml-play [data-hero-link="2"] {
+  animation-delay: 1010ms;
+}
+
+.ml-play [data-hero-link="3"] {
+  animation-delay: 1040ms;
+}
+
+.ml-play [data-hero-link="4"] {
+  animation-delay: 1070ms;
+}
+
+.ml-play [data-hero-link="5"] {
+  animation-delay: 1100ms;
+}
+
+/* ── Landing: scroll reveal ── */
+.ml-reveal {
+  width: 100%;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+}
+
+.ml-play .ml-reveal {
+  animation: mlRevealRise 500ms var(--ease-out) backwards;
+}
+
+.ml-reveal h4 {
+  margin: 0 0 6px;
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.ml-reveal p {
+  margin: 0;
+  font-size: var(--fs-label);
+  color: var(--text-2);
+}
+
+/* ── Landing: step morph ── */
+.ml-step-stack {
+  position: relative;
+  width: 400px;
+  max-width: 100%;
+  height: 300px;
+}
+
+.ml-step {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 400ms var(--ease-out);
+}
+
+.ml-step.is-on {
+  opacity: 1;
+}
+
+.ml-step-nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.ml-step-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 0 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  font-size: var(--fs-label);
+  color: var(--text-2);
+  cursor: pointer;
+}
+
+.ml-step-dot[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+/* ── Landing: policy pull ── */
+.ml-policy {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  min-width: 620px;
+}
+
+.ml-policy-doc {
+  position: relative;
+  width: 280px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+}
+
+.ml-policy-doc .ml-doc-line {
+  height: 8px;
+  border-radius: 2px;
+  background: var(--surface-2);
+  margin-bottom: 8px;
+}
+
+.ml-policy-doc .ml-doc-line:nth-child(2) {
+  width: 70%;
+}
+
+.ml-policy-doc .ml-doc-line:nth-child(4) {
+  width: 84%;
+}
+
+.ml-strip {
+  position: absolute;
+  left: 14px;
+  top: 50px;
+  z-index: 2;
+  padding: 3px 6px;
+  background: rgba(226, 176, 74, 0.45);
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  transform: translate(512px, 40px);
+}
+
+.ml-play .ml-strip {
+  animation: mlStripPull 800ms var(--ease-in-out) backwards;
+}
+
+.ml-policy-thread {
+  flex-shrink: 0;
+}
+
+.ml-policy-card {
+  width: 240px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+}
+
+.ml-policy-card h4 {
+  margin: 0 0 4px;
+  font-size: var(--fs-label);
+  font-weight: 600;
+}
+
+.ml-policy-card p {
+  margin: 0 0 10px;
+  font-size: 11px;
+  color: var(--text-3);
+}
+
+.ml-mini-toggle {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--verified);
+  margin-bottom: 10px;
+  transform-origin: center;
+}
+
+.ml-mini-toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 19px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.ml-play .ml-mini-toggle {
+  animation: mlTogglePop 160ms var(--ease-spring) 800ms backwards;
+}
+
+.ml-coverage-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-3);
+  margin-bottom: 4px;
+}
+
+.ml-coverage {
+  height: 8px;
+  background: var(--surface-2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ml-coverage-fill {
+  height: 100%;
+  width: 64%;
+  background: var(--verified);
+  transform-origin: left center;
+}
+
+.ml-play .ml-coverage-fill {
+  animation: mlBarFill 600ms var(--ease-out) 800ms backwards;
+}
+
+/* ── Landing: audit fan ── */
+.ml-fan svg > g {
+  transform-box: view-box;
+  transform-origin: 240px 320px;
+}
+
+.ml-play .ml-fan svg > g:nth-child(1) {
+  animation: mlFanA 700ms var(--ease-out) 0ms backwards;
+}
+
+.ml-play .ml-fan svg > g:nth-child(2) {
+  animation: mlFanB 700ms var(--ease-out) 60ms backwards;
+}
+
+.ml-play .ml-fan svg > g:nth-child(3) {
+  animation: mlFanC 700ms var(--ease-out) 120ms backwards;
+}
+
+.ml-play .ml-fan svg > g:nth-child(4) {
+  animation: mlFanD 700ms var(--ease-out) 180ms backwards;
+}
+
+/* ── Landing: parallax ── */
+.ml-px-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--r-control);
+  background: var(--surface);
+}
+
+.ml-px-inner {
+  position: relative;
+  height: 520px;
+}
+
+.ml-px-content {
+  position: relative;
+  z-index: 2;
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.ml-px-content .ml-doc-line {
+  height: 8px;
+  border-radius: 2px;
+  background: var(--surface-2);
+}
+
+.ml-px-content .ml-doc-line:nth-child(odd) {
+  width: 78%;
+}
+
+.ml-px-layer {
+  position: absolute;
+  right: 14px;
+  padding: 6px 10px;
+  border-radius: var(--r-control);
+  font-size: 11px;
+  font-weight: 600;
+  will-change: transform;
+}
+
+.ml-px-layer.is-back {
+  top: 48px;
+  background: var(--ill-ochre);
+  color: var(--ill-ink);
+}
+
+.ml-px-layer.is-front {
+  top: 300px;
+  background: var(--ill-teal);
+  color: var(--ill-paper);
+}
+
+/* ── Reduced-motion lab rules (blanket inside a playing stage) ──
+   Same effect as globals.css .ml-anim, applied to every animated
+   descendant so replay under reduce is a single 150ms fade. */
+html[data-reduce-motion="true"] .ml-play *,
+html[data-reduce-motion="true"] .ml-play *::before,
+html[data-reduce-motion="true"] .ml-play *::after {
+  animation-name: mlFade !important;
+  animation-duration: 150ms !important;
+  animation-delay: 0ms !important;
+  animation-iteration-count: 1 !important;
+  animation-timing-function: linear !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-reduce-motion="false"]) .ml-play *,
+  html:not([data-reduce-motion="false"]) .ml-play *::before,
+  html:not([data-reduce-motion="false"]) .ml-play *::after {
+    animation-name: mlFade !important;
+    animation-duration: 150ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    animation-timing-function: linear !important;
+  }
+}

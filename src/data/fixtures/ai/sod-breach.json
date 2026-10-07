@@ -1,0 +1,55 @@
+{
+  "scenarioId": "sod-breach",
+  "ruleId": "IAM-001",
+  "subjectId": "p_owusu",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "A. Owusu committed code (payments-api) and deployed to production (svc-deploy-prod) 3 hours apart without a second approver. The commit and the deploy share one actor, and no second approval was recorded.",
+      "citations": ["doc_access_control#sec-2", "cl_nist_ac_5"],
+      "evidenceRefs": [
+        { "type": "event", "id": "evt_c1" },
+        { "type": "event", "id": "evt_d1" },
+        { "type": "evidence", "id": "ev_0" }
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "The same actor commits code and changes production inside the window without another person approving the deploy. Our access control policy states it plainly: no one person may both change production code and deploy it to production without a second person approving the deploy.",
+      "citations": ["doc_access_control#sec-2", "cl_soc2_cc6_3"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "soc2_deficiency",
+    "paragraphs": [
+      {
+        "heading": "Control",
+        "text": "Separation of duties: code and production. The same actor commits code and changes production inside the window without another person approving the deploy.",
+        "citations": ["cl_soc2_cc6_3", "doc_access_control#sec-2"],
+        "evidenceRefs": [
+          { "type": "event", "id": "evt_c1" },
+          { "type": "event", "id": "evt_d1" }
+        ]
+      },
+      {
+        "heading": "Impact",
+        "text": "Risk score 35 with severity high. Review due by Mar 2, 09:00. One person changed production without a second approval.",
+        "citations": ["cl_nist_ac_5"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Compensating controls",
+        "text": "Record any compensating control and its evidence during review. The policy allows dual control or job rotation where separation is impractical.",
+        "citations": ["cl_nist_ac_5"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Remediation plan",
+        "text": "Record the remediation steps and the evidence that shows them complete. Access control policy requires a second person approving any deploy to production.",
+        "citations": ["doc_access_control#sec-2"],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

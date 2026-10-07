@@ -1,0 +1,69 @@
+{
+  "id": "missed-deadline",
+  "title": "Quarterly filing deadline",
+  "ruleId": "DEAD-001",
+  "domain": "regulatory",
+  "note": "Move 31 days forward into the April deadline crunch (1 Apr 2026): the quarterly filing enters its warning window alongside the other uncompleted obligations, Ama's certificate, Cedar's DPA and Meridian's SOC 2. All twelve opens are part of the expected set.",
+  "steps": [{ "kind": "advanceDays", "days": 31 }],
+  "expected": {
+    "opened": [
+      { "ruleId": "CERT-001", "subjectId": "p_ama" },
+      { "ruleId": "CERT-001", "subjectId": "p_nana" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_cert_monthly_status" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_vendor_quarterly_risk" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_qtr_filing" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_sar_filing" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_horizon_scan" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_pen_test" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_deps_scan" },
+      { "ruleId": "DEAD-001", "subjectId": "ob_expense_monthly_close" },
+      { "ruleId": "VEND-001", "subjectId": "v_meridian" },
+      { "ruleId": "VEND-001", "subjectId": "v_cedar" }
+    ],
+    "resolved": []
+  },
+  "twin": {
+    "title": "Negative control: every deadline completed, same 31-day jump",
+    "note": "All eight obligations due by 1 Apr are completed, both certificates renewed and both vendor documents on file before the same jump, so the quarterly filing may not raise an alert.",
+    "steps": [
+      {
+        "kind": "upsertCertification",
+        "personId": "p_ama",
+        "certType": "First Aid",
+        "issuedOn": "2026-03-16",
+        "expiresOn": "2027-03-15"
+      },
+      {
+        "kind": "upsertCertification",
+        "personId": "p_nana",
+        "certType": "Security awareness",
+        "issuedOn": "2026-03-01",
+        "expiresOn": "2027-03-01"
+      },
+      { "kind": "completeObligation", "obligationId": "ob_pen_test" },
+      { "kind": "completeObligation", "obligationId": "ob_deps_scan" },
+      { "kind": "completeObligation", "obligationId": "ob_cert_monthly_status" },
+      { "kind": "completeObligation", "obligationId": "ob_horizon_scan" },
+      { "kind": "completeObligation", "obligationId": "ob_sar_filing" },
+      { "kind": "completeObligation", "obligationId": "ob_expense_monthly_close" },
+      { "kind": "completeObligation", "obligationId": "ob_vendor_quarterly_risk" },
+      { "kind": "completeObligation", "obligationId": "ob_qtr_filing" },
+      {
+        "kind": "upsertVendorDocument",
+        "vendorId": "v_meridian",
+        "documentType": "soc2_report",
+        "validFrom": "2025-01-01",
+        "expiresOn": "2027-01-01"
+      },
+      {
+        "kind": "upsertVendorDocument",
+        "vendorId": "v_cedar",
+        "documentType": "dpa",
+        "validFrom": "2026-03-01",
+        "expiresOn": "2027-03-10"
+      },
+      { "kind": "advanceDays", "days": 31 }
+    ],
+    "expected": { "opened": [], "resolved": [] }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "restricted-record-access",
+  "title": "Restricted record viewed outside the care team",
+  "ruleId": "HIPAA-001",
+  "domain": "healthcare",
+  "note": "A restricted patient record is viewed by someone who is not on its care team.",
+  "steps": [
+    {
+      "kind": "event",
+      "event": {
+        "id": "evt_view",
+        "domain": "healthcare",
+        "actor": { "id": "p_daniel", "name": "Daniel Aterah", "role": "Security engineer" },
+        "action": "view_record",
+        "resource": {
+          "type": "record",
+          "id": "rec_9",
+          "label": "Patient record rec_9",
+          "attributes": { "restricted": true, "careTeam": ["p_kwesi", "p_ama"] }
+        },
+        "context": {},
+        "timestamp": "2026-01-10T09:00:00.000Z",
+        "source": "ehr-viewer"
+      }
+    }
+  ],
+  "expected": {
+    "opened": [{ "ruleId": "HIPAA-001", "subjectId": "p_daniel" }],
+    "resolved": []
+  },
+  "twin": {
+    "title": "Negative control: the viewer sits on the care team",
+    "note": "The same restricted record, viewed by a care-team member, so no alert may fire.",
+    "steps": [
+      {
+        "kind": "event",
+        "event": {
+          "id": "evt_view",
+          "domain": "healthcare",
+          "actor": { "id": "p_daniel", "name": "Daniel Aterah", "role": "Security engineer" },
+          "action": "view_record",
+          "resource": {
+            "type": "record",
+            "id": "rec_9",
+            "label": "Patient record rec_9",
+            "attributes": { "restricted": true, "careTeam": ["p_kwesi", "p_ama", "p_daniel"] }
+          },
+          "context": {},
+          "timestamp": "2026-01-10T09:00:00.000Z",
+          "source": "ehr-viewer"
+        }
+      }
+    ],
+    "expected": { "opened": [], "resolved": [] }
+  }
+}

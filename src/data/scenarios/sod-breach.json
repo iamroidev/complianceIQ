@@ -1,0 +1,72 @@
+{
+  "id": "sod-breach",
+  "title": "Separation of duties: commit and deploy",
+  "ruleId": "IAM-001",
+  "domain": "access",
+  "note": "The same actor commits code and deploys it to production 3 hours apart with no second approver.",
+  "steps": [
+    {
+      "kind": "event",
+      "event": {
+        "id": "evt_c1",
+        "domain": "access",
+        "actor": { "id": "p_owusu", "name": "A. Owusu", "role": "Developer" },
+        "action": "commit_code",
+        "resource": { "type": "service", "id": "svc-payments", "label": "payments-api" },
+        "context": {},
+        "timestamp": "2026-02-10T10:00:00.000Z",
+        "source": "git"
+      }
+    },
+    {
+      "kind": "event",
+      "event": {
+        "id": "evt_d1",
+        "domain": "access",
+        "actor": { "id": "p_owusu", "name": "A. Owusu", "role": "Developer" },
+        "action": "deploy_prod",
+        "resource": { "type": "environment", "id": "svc-deploy-prod", "label": "svc-deploy-prod" },
+        "context": {},
+        "timestamp": "2026-02-10T13:00:00.000Z",
+        "source": "ci-deployer"
+      }
+    }
+  ],
+  "expected": {
+    "opened": [{ "ruleId": "IAM-001", "subjectId": "p_owusu" }],
+    "resolved": []
+  },
+  "twin": {
+    "title": "Negative control: the same deploy approved by a second person",
+    "note": "A distinct approver on the deploy clears the window, so no alert may fire.",
+    "steps": [
+      {
+        "kind": "event",
+        "event": {
+          "id": "evt_c1",
+          "domain": "access",
+          "actor": { "id": "p_owusu", "name": "A. Owusu", "role": "Developer" },
+          "action": "commit_code",
+          "resource": { "type": "service", "id": "svc-payments", "label": "payments-api" },
+          "context": {},
+          "timestamp": "2026-02-10T10:00:00.000Z",
+          "source": "git"
+        }
+      },
+      {
+        "kind": "event",
+        "event": {
+          "id": "evt_d1",
+          "domain": "access",
+          "actor": { "id": "p_owusu", "name": "A. Owusu", "role": "Developer" },
+          "action": "deploy_prod",
+          "resource": { "type": "environment", "id": "svc-deploy-prod", "label": "svc-deploy-prod" },
+          "context": { "approvedBy": "p_daniel" },
+          "timestamp": "2026-02-10T13:00:00.000Z",
+          "source": "ci-deployer"
+        }
+      }
+    ],
+    "expected": { "opened": [], "resolved": [] }
+  }
+}

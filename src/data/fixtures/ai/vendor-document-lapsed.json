@@ -1,0 +1,54 @@
+{
+  "scenarioId": "vendor-document-lapsed",
+  "ruleId": "VEND-001",
+  "subjectId": "v_cedar",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Cedar Analytics's DPA expired on 10 Mar 2026. Standard-tier vendors must hold a current DPA. The vendor record shows a data processing agreement that passed its end date, with no renewal recorded.",
+      "citations": ["doc_vendor_management#sec-3"],
+      "evidenceRefs": [{ "type": "evidence", "id": "ev_10" }]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "A vendor is missing or holds an expired document required for its tier (critical: SOC 2, DPA, insurance; standard: DPA). Data processing agreements must be renewed before they expire, and the standard tier requires a current signed data processing agreement.",
+      "citations": ["doc_vendor_management#sec-2", "doc_vendor_management#sec-3"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "exception_memo",
+    "paragraphs": [
+      {
+        "heading": "Finding",
+        "text": "Cedar Analytics's DPA expired on 10 Mar 2026. Standard-tier vendors must hold a current DPA.",
+        "citations": ["doc_vendor_management#sec-3"],
+        "evidenceRefs": [{ "type": "record", "id": "v_cedar" }]
+      },
+      {
+        "heading": "Requirement",
+        "text": "A vendor is missing or holds an expired document required for its tier (critical: SOC 2, DPA, insurance; standard: DPA). Standard-tier vendors must provide a signed data processing agreement. Data processing agreements must be renewed before they expire.",
+        "citations": ["doc_vendor_management#sec-2", "doc_vendor_management#sec-3"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Impact",
+        "text": "Risk score 25 with severity medium. Review due by Mar 19, 09:00. The agreement for this standard-tier vendor lapsed on 10 Mar 2026, so the required document is no longer current.",
+        "citations": ["doc_vendor_management#sec-3"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Corrective action",
+        "text": "Record the renewal in the vendor record and attach the agreement evidence, then close this finding with a reason.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Owner and due date",
+        "text": "Owner not yet assigned. Review due by Mar 19, 09:00.",
+        "citations": [],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

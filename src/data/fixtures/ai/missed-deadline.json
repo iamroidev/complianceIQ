@@ -1,0 +1,54 @@
+{
+  "scenarioId": "missed-deadline",
+  "ruleId": "DEAD-001",
+  "subjectId": "ob_qtr_filing",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Quarterly suspicious activity filing is due in 14 days, on 15 Apr 2026. No completion evidence recorded. The obligation is confirmed with no completion date, so this check reports it inside the warning window.",
+      "citations": ["doc_regulatory_calendar#sec-2"],
+      "evidenceRefs": [{ "type": "evidence", "id": "ev_8" }]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "A confirmed obligation with no completion evidence is inside the warning window (warning) or already past due (breach). The calendar keeps recurring filings on a short clock: a suspicious activity summary must be filed within fifteen days of each quarter end.",
+      "citations": ["doc_regulatory_calendar#sec-2", "cl_31cfr_1020_320"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "exception_memo",
+    "paragraphs": [
+      {
+        "heading": "Finding",
+        "text": "Quarterly suspicious activity filing is due in 14 days, on 15 Apr 2026. No completion evidence recorded.",
+        "citations": ["doc_regulatory_calendar#sec-2"],
+        "evidenceRefs": [{ "type": "record", "id": "ob_qtr_filing" }]
+      },
+      {
+        "heading": "Requirement",
+        "text": "A confirmed obligation with no completion evidence is inside the warning window (warning) or already past due (breach). A suspicious activity summary must be filed within fifteen days of each quarter end.",
+        "citations": ["doc_regulatory_calendar#sec-2", "cl_31cfr_1020_320"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Impact",
+        "text": "Risk score 25 with severity medium. Review due by Apr 4, 09:00. The quarterly filing falls due on 15 Apr 2026, and no completion evidence exists at this check.",
+        "citations": ["doc_regulatory_calendar#sec-2"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Corrective action",
+        "text": "Record the completion evidence for this obligation, then close this finding with a reason.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Owner and due date",
+        "text": "Owner not yet assigned. Due on Apr 15, 2026, review by Apr 4, 09:00.",
+        "citations": [],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

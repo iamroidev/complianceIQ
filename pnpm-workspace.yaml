@@ -1,0 +1,4 @@
+allowBuilds:
+  unrs-resolver: true
+patchedDependencies:
+  next@15.5.27: patches/next@15.5.27.patch

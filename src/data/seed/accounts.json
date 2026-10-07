@@ -1,0 +1,50 @@
+[
+  {
+    "id": "acc_kofi_cash",
+    "personId": "p_kofi",
+    "system": "Cash management portal",
+    "privileged": true,
+    "lastActiveOn": "2026-02-27",
+    "mfaEnabled": true
+  },
+  {
+    "id": "acc_owusu_github",
+    "personId": "p_owusu",
+    "system": "GitHub",
+    "privileged": true,
+    "lastActiveOn": "2026-03-01",
+    "mfaEnabled": true
+  },
+  {
+    "id": "acc_daniel_github",
+    "personId": "p_daniel",
+    "system": "GitHub",
+    "privileged": true,
+    "lastActiveOn": "2026-02-28",
+    "mfaEnabled": false
+  },
+  {
+    "id": "acc_ama_emr",
+    "personId": "p_ama",
+    "system": "Electronic health record",
+    "privileged": false,
+    "lastActiveOn": "2026-02-28",
+    "mfaEnabled": true
+  },
+  {
+    "id": "acc_rmensah_admin",
+    "personId": "p_rmensah",
+    "system": "ComplianceIQ admin",
+    "privileged": true,
+    "lastActiveOn": "2026-03-01",
+    "mfaEnabled": true
+  },
+  {
+    "id": "acc_daniel_cloud",
+    "personId": "p_daniel",
+    "system": "Cloud console",
+    "privileged": true,
+    "lastActiveOn": "2026-01-20",
+    "mfaEnabled": false
+  }
+]

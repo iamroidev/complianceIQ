@@ -1,0 +1,54 @@
+{
+  "scenarioId": "expired-certification",
+  "ruleId": "CERT-001",
+  "subjectId": "p_ama",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Ama Serwaa Owusu's First Aid certificate expired on 15 Mar 2026, 1 day ago. The role requires it. The check compared the expiry date with the day of the check and found the certificate lapsed the day after its printed end date.",
+      "citations": ["doc_training_certification#sec-3"],
+      "evidenceRefs": [{ "type": "evidence", "id": "ev_0" }]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "An active person whose role requires a certification has no valid one at asOf (expiry day itself is still valid). A certificate is valid through the end date printed on it. The expiry date itself counts as a valid day; the certificate lapses the day after.",
+      "citations": ["doc_training_certification#sec-2", "doc_training_certification#sec-3"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "exception_memo",
+    "paragraphs": [
+      {
+        "heading": "Finding",
+        "text": "Ama Serwaa Owusu's First Aid certificate expired on 15 Mar 2026, 1 day ago. The role requires a high-criticality certification.",
+        "citations": ["doc_training_certification#sec-3"],
+        "evidenceRefs": [{ "type": "evidence", "id": "ev_0" }]
+      },
+      {
+        "heading": "Requirement",
+        "text": "An active person whose role requires a certification has no valid one at asOf (expiry day itself is still valid). A certificate is valid through the end date printed on it; the certificate lapses the day after.",
+        "citations": ["doc_training_certification#sec-2", "doc_training_certification#sec-3"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Impact",
+        "text": "Risk score 50 with severity high. Review due by Mar 17, 09:00. The role requires a high-criticality certification, and no valid certificate exists at the check time.",
+        "citations": ["doc_training_certification#sec-2"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Corrective action",
+        "text": "Record the renewed First Aid certificate in the staff record and attach the evidence, then close this finding with a reason.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Owner and due date",
+        "text": "Owner not yet assigned. Review due by Mar 17, 09:00.",
+        "citations": [],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

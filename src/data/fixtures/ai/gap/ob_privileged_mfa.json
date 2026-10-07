@@ -1,0 +1,5 @@
+{
+  "text": "Evidence that every privileged account holds multi-factor authentication would satisfy this requirement; no automated check watches it today.",
+  "citedQuote": "Every privileged account must have multi-factor authentication enabled.",
+  "suggestedCheck": "Export the privileged account list with multi-factor status each quarter and attach it."
+}

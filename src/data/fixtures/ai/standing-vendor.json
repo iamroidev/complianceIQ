@@ -1,0 +1,54 @@
+{
+  "scenarioId": "standing-vendor",
+  "ruleId": "VEND-001",
+  "subjectId": "v_meridian",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Meridian Freight Ltd is missing a required SOC 2 report. Critical-tier vendors must hold a current SOC 2 report. The vendor record holds a contract, a data processing agreement and insurance, but no SOC 2 report.",
+      "citations": ["doc_vendor_management#sec-2"],
+      "evidenceRefs": [{ "type": "evidence", "id": "ev_4" }]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "A vendor is missing or holds an expired document required for its tier (critical: SOC 2, DPA, insurance; standard: DPA). Our own policy repeats the bar: critical-tier vendors must provide a current SOC 2 report, a signed data processing agreement and proof of insurance.",
+      "citations": ["doc_vendor_management#sec-2", "cl_soc2_cc6_1"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "exception_memo",
+    "paragraphs": [
+      {
+        "heading": "Finding",
+        "text": "Meridian Freight Ltd is missing a required SOC 2 report. Critical-tier vendors must hold a current SOC 2 report.",
+        "citations": ["doc_vendor_management#sec-2"],
+        "evidenceRefs": [{ "type": "record", "id": "v_meridian" }]
+      },
+      {
+        "heading": "Requirement",
+        "text": "A vendor is missing or holds an expired document required for its tier (critical: SOC 2, DPA, insurance; standard: DPA). Critical-tier vendors must provide a current SOC 2 report, a signed data processing agreement and proof of insurance.",
+        "citations": ["doc_vendor_management#sec-2", "cl_soc2_cc6_1"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Impact",
+        "text": "Risk score 35 with severity high. Review due by Mar 2, 09:00. The vendor sits in the critical tier, where the SOC 2 report is the required evidence of the vendor's own controls.",
+        "citations": ["cl_soc2_cc6_1"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Corrective action",
+        "text": "Request the current SOC 2 report from the vendor owner and attach it to the vendor record, then close this finding with a reason.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Owner and due date",
+        "text": "Owner not yet assigned. Review due by Mar 2, 09:00.",
+        "citations": [],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "scenarioId": "standing-cert-nana",
+  "ruleId": "CERT-001",
+  "subjectId": "p_nana",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Nana Adjeiwaa has no Security awareness certificate on file. The role requires it. The staff record holds no matching certificate for the Security awareness type, so the requirement is unmet at the time of this check.",
+      "citations": ["doc_training_certification#sec-2"],
+      "evidenceRefs": [{ "type": "evidence", "id": "ev_0" }]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "An active person whose role requires a certification has no valid one at asOf (expiry day itself is still valid). All staff must complete security awareness training each year, and a missing required certificate blocks the tasks that depend on it until a valid certificate is on file.",
+      "citations": ["doc_training_certification#sec-2", "doc_training_certification#sec-3"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "exception_memo",
+    "paragraphs": [
+      {
+        "heading": "Finding",
+        "text": "Nana Adjeiwaa has no Security awareness certificate on file. The role requires it.",
+        "citations": ["doc_training_certification#sec-2"],
+        "evidenceRefs": [{ "type": "evidence", "id": "ev_0" }]
+      },
+      {
+        "heading": "Requirement",
+        "text": "An active person whose role requires a certification has no valid one at asOf (expiry day itself is still valid). All staff must complete security awareness training each year.",
+        "citations": ["doc_training_certification#sec-2"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Impact",
+        "text": "Risk score 25 with severity medium. Review due by Mar 4, 09:00. The policy says a person whose required certificate is missing or expired may not perform the tasks that depend on it until a valid certificate is on file.",
+        "citations": ["doc_training_certification#sec-2"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Corrective action",
+        "text": "Record the renewal in the staff record and attach the certificate evidence, then close this finding with a reason.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Owner and due date",
+        "text": "Owner not yet assigned. Review due by Mar 4, 09:00.",
+        "citations": [],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "payment-without-approver",
+  "title": "Payment released above the approval limit",
+  "ruleId": "FIN-001",
+  "domain": "finance",
+  "note": "USD 25,000 needs two distinct approvers; the release carried one.",
+  "steps": [
+    {
+      "kind": "event",
+      "event": {
+        "id": "evt_pay_1",
+        "domain": "finance",
+        "actor": { "id": "p_kofi", "name": "Kofi Adjei-Boateng", "role": "Treasury manager" },
+        "action": "payment_released",
+        "resource": { "type": "payment", "id": "pay_1", "label": "Invoice 4711" },
+        "context": { "amount": 25000, "currency": "USD", "approvers": ["p_daniel"], "requestedBy": "p_kofi" },
+        "timestamp": "2026-01-10T09:00:00.000Z",
+        "source": "payments-api"
+      }
+    }
+  ],
+  "expected": {
+    "opened": [{ "ruleId": "FIN-001", "subjectId": "pay_1" }],
+    "resolved": []
+  },
+  "twin": {
+    "title": "Negative control: the same payment with two distinct approvers",
+    "note": "Above the two-approver threshold with two approvers who are not the requester, so no alert may fire.",
+    "steps": [
+      {
+        "kind": "event",
+        "event": {
+          "id": "evt_pay_1",
+          "domain": "finance",
+          "actor": { "id": "p_kofi", "name": "Kofi Adjei-Boateng", "role": "Treasury manager" },
+          "action": "payment_released",
+          "resource": { "type": "payment", "id": "pay_1", "label": "Invoice 4711" },
+          "context": { "amount": 25000, "currency": "USD", "approvers": ["p_daniel", "p_kojo"], "requestedBy": "p_kofi" },
+          "timestamp": "2026-01-10T09:00:00.000Z",
+          "source": "payments-api"
+        }
+      }
+    ],
+    "expected": { "opened": [], "resolved": [] }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "scenarioId": "payment-without-approver",
+  "ruleId": "FIN-001",
+  "subjectId": "pay_1",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Payment of USD 25,000.00 to Invoice 4711 was released with 1 distinct approver; 2 are required above USD 25,000. The release carried a single approval while the amount sits at the two-approver threshold.",
+      "citations": ["doc_payment_approval#sec-2"],
+      "evidenceRefs": [
+        { "type": "event", "id": "evt_pay_1" },
+        { "type": "evidence", "id": "ev_0" }
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "A payment at or above USD 5,000 needs one approver who is not the requester; at or above USD 25,000 it needs two distinct approvers. The policy also separates the requester: two approvals from the same person count as one.",
+      "citations": ["doc_payment_approval#sec-2", "doc_payment_approval#sec-3"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "exception_memo",
+    "paragraphs": [
+      {
+        "heading": "Finding",
+        "text": "Payment of USD 25,000.00 to Invoice 4711 was released with 1 distinct approver; 2 are required above USD 25,000.",
+        "citations": ["doc_payment_approval#sec-2"],
+        "evidenceRefs": [{ "type": "event", "id": "evt_pay_1" }]
+      },
+      {
+        "heading": "Requirement",
+        "text": "A payment at or above USD 5,000 needs one approver who is not the requester; at or above USD 25,000 it needs two distinct approvers. Two approvals from the same person count as one.",
+        "citations": ["doc_payment_approval#sec-2", "doc_payment_approval#sec-3"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Impact",
+        "text": "Risk score 35 with severity high. Review due by Mar 2, 09:00. A payment above the two-approver threshold moved to release with one approval on record.",
+        "citations": ["doc_payment_approval#sec-2"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Corrective action",
+        "text": "Record the second approver's decision and the corrected payment evidence, then close this finding with a reason.",
+        "citations": [],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Owner and due date",
+        "text": "Owner not yet assigned. Review due by Mar 2, 09:00.",
+        "citations": [],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}

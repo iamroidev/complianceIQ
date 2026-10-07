@@ -1,0 +1,44 @@
+{
+  "AML-001": [
+    "cl_31usc_5324",
+    "cl_31cfr_1020_320",
+    "cl_31cfr_1010_311",
+    "doc_aml_procedure#sec-2"
+  ],
+  "FIN-001": [
+    "doc_payment_approval#sec-2",
+    "doc_payment_approval#sec-3"
+  ],
+  "IAM-001": [
+    "cl_nist_ac_5",
+    "cl_soc2_cc6_3",
+    "cl_nist_ac_2",
+    "doc_access_control#sec-2"
+  ],
+  "HIPAA-001": [
+    "cl_45cfr_164_502_b",
+    "cl_45cfr_164_402",
+    "doc_access_control#sec-3"
+  ],
+  "DEV-001": [
+    "cl_nist_ia_5_7",
+    "cl_nist_sa_11",
+    "cl_soc2_cc6_8",
+    "doc_secure_development#sec-2"
+  ],
+  "CERT-001": [
+    "doc_training_certification#sec-2",
+    "doc_training_certification#sec-3"
+  ],
+  "DEAD-001": [
+    "cl_31cfr_1020_320",
+    "doc_regulatory_calendar#sec-2",
+    "doc_regulatory_calendar#sec-3",
+    "doc_regulatory_calendar#sec-4"
+  ],
+  "VEND-001": [
+    "cl_soc2_cc6_1",
+    "doc_vendor_management#sec-2",
+    "doc_vendor_management#sec-3"
+  ]
+}

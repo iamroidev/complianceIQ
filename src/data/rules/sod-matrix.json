@@ -1,0 +1,9 @@
+{
+  "pairs": [
+    {
+      "first": "commit_code",
+      "second": "deploy_prod",
+      "label": "Writing code and deploying it to production"
+    }
+  ]
+}

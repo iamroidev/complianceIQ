@@ -1,0 +1,70 @@
+[
+  {
+    "id": "p_kofi",
+    "name": "Kofi Adjei-Boateng",
+    "role": "Treasury manager",
+    "department": "Finance",
+    "status": "active",
+    "managerId": "p_rmensah"
+  },
+  {
+    "id": "p_ama",
+    "name": "Ama Serwaa Owusu",
+    "role": "Clinical nurse",
+    "department": "Clinical",
+    "status": "active",
+    "managerId": "p_kwesi"
+  },
+  {
+    "id": "p_rmensah",
+    "name": "R. Mensah",
+    "role": "Compliance officer",
+    "department": "Compliance",
+    "status": "active"
+  },
+  {
+    "id": "p_owusu",
+    "name": "A. Owusu",
+    "role": "Developer",
+    "department": "Engineering",
+    "status": "active",
+    "managerId": "p_daniel"
+  },
+  {
+    "id": "p_kwesi",
+    "name": "Dr. Kwesi Danquah",
+    "role": "Care physician",
+    "department": "Clinical",
+    "status": "active"
+  },
+  {
+    "id": "p_efua",
+    "name": "Efua Mensimah",
+    "role": "Vendor manager",
+    "department": "Operations",
+    "status": "active",
+    "managerId": "p_rmensah"
+  },
+  {
+    "id": "p_daniel",
+    "name": "Daniel Aterah",
+    "role": "Security engineer",
+    "department": "Engineering",
+    "status": "active"
+  },
+  {
+    "id": "p_nana",
+    "name": "Nana Adjeiwaa",
+    "role": "People operations lead",
+    "department": "People",
+    "status": "active"
+  },
+  {
+    "id": "p_kojo",
+    "name": "Kojo Asare",
+    "role": "Treasury analyst",
+    "department": "Finance",
+    "status": "leave",
+    "managerId": "p_kofi"
+  }
+]

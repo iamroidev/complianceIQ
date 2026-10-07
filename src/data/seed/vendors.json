@@ -1,0 +1,38 @@
+[
+  {
+    "id": "v_meridian",
+    "name": "Meridian Freight Ltd",
+    "tier": "critical",
+    "ownerId": "p_efua",
+    "lastReviewedOn": "2025-11-20",
+    "documents": [
+      { "type": "contract", "validFrom": "2024-06-01" },
+      { "type": "dpa", "validFrom": "2025-01-01", "expiresOn": "2026-09-30" },
+      { "type": "insurance", "validFrom": "2025-04-01", "expiresOn": "2026-04-30" }
+    ]
+  },
+  {
+    "id": "v_harborline",
+    "name": "Harborline Data Co",
+    "tier": "critical",
+    "ownerId": "p_efua",
+    "lastReviewedOn": "2026-01-12",
+    "documents": [
+      { "type": "contract", "validFrom": "2023-09-01" },
+      { "type": "soc2_report", "validFrom": "2025-06-01", "expiresOn": "2026-12-31" },
+      { "type": "dpa", "validFrom": "2025-06-01", "expiresOn": "2026-12-31" },
+      { "type": "insurance", "validFrom": "2025-09-01", "expiresOn": "2026-10-31" }
+    ]
+  },
+  {
+    "id": "v_cedar",
+    "name": "Cedar Analytics",
+    "tier": "standard",
+    "ownerId": "p_efua",
+    "lastReviewedOn": "2025-10-05",
+    "documents": [
+      { "type": "contract", "validFrom": "2025-02-01" },
+      { "type": "dpa", "validFrom": "2025-02-01", "expiresOn": "2026-03-10" }
+    ]
+  }
+]

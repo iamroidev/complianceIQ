@@ -1,0 +1,47 @@
+{
+  "obligations": [
+    {
+      "title": "First Aid certificate for clinical staff",
+      "kind": "requirement",
+      "quote": "Clinical staff must hold a current First Aid certificate.",
+      "suggestedRuleId": "CERT-001"
+    },
+    {
+      "title": "Annual AML training",
+      "kind": "recurring",
+      "cadence": "annual",
+      "quote": "Treasury staff must complete AML training annually.",
+      "suggestedRuleId": "CERT-001"
+    },
+    {
+      "title": "Annual security awareness training",
+      "kind": "recurring",
+      "cadence": "annual",
+      "quote": "All staff must complete security awareness training each year.",
+      "suggestedRuleId": "CERT-001"
+    },
+    {
+      "title": "Blocked from tasks without a valid certificate",
+      "kind": "prohibition",
+      "quote": "A person whose required certificate is missing or expired may not perform the tasks that depend on it until a valid certificate is on file.",
+      "suggestedRuleId": "CERT-001"
+    },
+    {
+      "title": "Renew certificates 30 days ahead",
+      "kind": "deadline",
+      "quote": "Staff must renew each certificate at least 30 days before it expires."
+    },
+    {
+      "title": "Monthly expiry reporting",
+      "kind": "recurring",
+      "cadence": "monthly",
+      "quote": "Certification expiry dates must be reported to managers each month.",
+      "suggestedRuleId": "DEAD-001"
+    },
+    {
+      "title": "Training records retention",
+      "kind": "requirement",
+      "quote": "Training records must be kept for three years after a person leaves the firm."
+    }
+  ]
+}

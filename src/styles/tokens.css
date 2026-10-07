@@ -1,0 +1,255 @@
+/* ============================================================
+   ComplianceIQ design tokens — the only place raw hex lives.
+   Five palettes, chosen on /styleguide and remembered:
+   mist (default) · butter · paper · sand · dark
+   Each follows the 60 canvas / 30 structure / 10 accent rule.
+   ============================================================ */
+
+:root {
+  /* ── Mist blue (default): 60% cool grey-blue canvas · 30% deep navy · 10% signal red ── */
+  --bg: #f2f5f9; /* cool grey-blue — primary background */
+  --surface: #ffffff; /* cards, tables, drawers */
+  --surface-2: #e9eef5; /* panels, hover rows, sunken areas */
+
+  /* §30.1 Legibility tokens: body/meta text ≥ 7:1; large text ≥ 4.5:1 */
+  --text: #14171a; /* deep charcoal-navy — all primary typography (≈ 16:1) */
+  --text-2: #43484e; /* high-contrast secondary text (≈ 8.8:1) */
+  --text-3: #5c7086; /* ONLY for disabled controls and decorative icons */
+  --line: rgba(18, 38, 63, 0.16); /* data grid lines */
+  --accent: #1d4e89; /* primary buttons, links, selection */
+  --nav-bg: #12263f; /* sidebar and top bar */
+  --nav-text: #eaf1f8; /* nav labels */
+  --nav-text-2: #93a8c0; /* inactive nav labels */
+
+  /* ── 10% accent (used sparingly) ── */
+  --cta: #d64045; /* THE one primary call-to-action per view + badges */
+  --cta-solid: #d13d42; /* solid red buttons/badges with white text (AA ≥ 4.5:1) */
+  --critical: #d22f35; /* Critical severity and "Records altered" only */
+  --critical-text: #8b1e1e; /* §30.1 high-contrast critical text (≥ 7:1) */
+  --high: #9f610e;
+  --high-text: #6b3500; /* §30.1 high-contrast high/warning text (≥ 7:1) */
+  --medium: #3d6fb5;
+  --low: #63676d;
+  --ok-text: #08483e; /* §30.1 high-contrast ok/verified text (≥ 7:1) */
+  --info-text: #142c4c; /* §30.1 high-contrast info text (≥ 7:1) */
+
+  --verified: #0f6b5e; /* ONLY for "verified / unaltered / proven" */
+  --verified-bg: #e2f0ec;
+  --hl: #fef3c7; /* high-contrast quote highlight in policy text (ochre 35%) */
+  --hl-mark: #fef08a;
+  --on-cta: #ffffff; /* text on solid --cta buttons */
+  --on-accent: #ffffff; /* text on solid --accent buttons */
+
+  /* ── Type scale (§22.2, §30.1; rem based; min body 16px, min meta 14px) ── */
+  --fs-number: 2.25rem;
+  --lh-number: 2.5rem;
+  --fs-title: 1.75rem;
+  --lh-title: 2.25rem;
+  --fs-sentence: 1.5rem;
+  --lh-sentence: 2rem;
+  --fs-section: 1.25rem;
+  --lh-section: 1.75rem;
+  --fs-body: 1rem; /* 16px */
+  --lh-body: 1.5rem;
+  --fs-table: 1rem; /* 16px (§30.1) */
+  --lh-table: 1.5rem;
+  --fs-meta: 0.875rem; /* 14px (§30.1, replaces 13px) */
+  --lh-meta: 1.25rem;
+  --fs-hash: 0.8125rem; /* 13px */
+
+  /* Aliases for backwards compatibility */
+  --fs-base: 1rem;
+  --lh-base: 1.5rem;
+  --fs-label: 0.875rem; /* 14px (§30.1) */
+
+  /* ── Dimensions (§22.3) ── */
+  --nav-w: 248px;
+  --nav-w-collapsed: 72px;
+  --topbar-h: 64px;
+  --row-h: 52px;
+  --row-h-compact: 44px;
+  --row-h-header: 44px;
+  --cell-pad: 14px 20px;
+  --btn-h: 44px;
+  --btn-h-primary: 48px;
+  --input-h: 44px;
+  --icon-sz: 20px;
+  --nav-icon-sz: 24px;
+  --panel-pad: 24px;
+  --gap-base: 24px;
+  --gap-section: 40px;
+  --spot-sz: 140px;
+  --max-prose: 72ch;
+
+  /* ── Shape ── */
+  --r-control: 2px;
+  --r-container: 6px;
+
+  /* ── Illustration (DESIGN.md §16) ── */
+  --ill-ink: #12263f;
+  --ill-paper: #fffdf8;
+  --ill-cream: #f2ebdd;
+  --ill-teal: #2e9e8a;
+  --ill-ochre: #e2b04a;
+  --ill-terracotta: #d4694e;
+  --ill-sage: #9fbfa8;
+  --ill-sky: #b7cde6;
+  --ill-stroke: 2px;
+  --ill-shadow: 4px 4px 0 rgba(18, 38, 63, 0.14);
+
+  /* ── Motion (DESIGN.md §17) ── */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-instant: 90ms;
+  --dur-fast: 160ms;
+  --dur-base: 240ms;
+  --dur-slow: 420ms;
+  --dur-scene: 800ms;
+}
+
+/* ── Butter: butter yellow canvas · marine blue structure · bright red action ── */
+[data-theme="butter"] {
+  --bg: #fefad4;
+  --surface-2: #f7f1ce;
+  --text: #002b5b;
+  --text-2: #33506f;
+  --text-3: #5b7192;
+  --line: rgba(0, 43, 91, 0.16);
+  --accent: #002b5b;
+  --nav-bg: #002b5b;
+  --nav-text: #e9eef6;
+  --nav-text-2: #9fb4ce;
+  --cta: #b92b27;
+  --cta-solid: #b92b27;
+  --critical: #8b1e1e;
+  --critical-text: #8b1e1e;
+  --high: #6b3500;
+  --high-text: #6b3500;
+  --verified-bg: #e3f0ec;
+  --hl: #f4e6a8;
+  --ill-ink: #002b5b;
+  --ill-shadow: 4px 4px 0 rgba(0, 43, 91, 0.14);
+}
+
+/* ── Warm paper: off-white canvas · charcoal type · navy structure · muted red ── */
+[data-theme="paper"] {
+  --bg: #faf9f6;
+  --surface-2: #f2f0eb;
+  --text: #17191c;
+  --text-2: #4b4f55;
+  --text-3: #6e7278;
+  --line: rgba(23, 25, 28, 0.14);
+  --accent: #1f3a5f;
+  --nav-bg: #1f3a5f;
+  --nav-text: #eef2f7;
+  --nav-text-2: #9fb0c6;
+  --cta: #b92b27;
+  --cta-solid: #b92b27;
+  --critical: #8b1e1e;
+  --critical-text: #8b1e1e;
+  --high: #6b3500;
+  --high-text: #6b3500;
+  --verified-bg: #e3f0ec;
+  --hl: #f6ecc9;
+  --ill-ink: #1f3a5f;
+  --ill-shadow: 4px 4px 0 rgba(31, 58, 95, 0.14);
+}
+
+/* ── Sand: warm sand canvas · espresso structure · terracotta action ── */
+[data-theme="sand"] {
+  --bg: #f6f1e9;
+  --surface: #fffdf9;
+  --surface-2: #efe8dc;
+  --text: #2a2320;
+  --text-2: #4e453f;
+  --text-3: #6e645b;
+  --line: rgba(42, 35, 32, 0.14);
+  --accent: #4a342a;
+  --nav-bg: #4a342a;
+  --nav-text: #f6efe7;
+  --nav-text-2: #c4b3a4;
+  --cta: #b92b27;
+  --cta-solid: #b92b27;
+  --critical: #8b1e1e;
+  --critical-text: #8b1e1e;
+  --high: #6b3500;
+  --high-text: #6b3500;
+  --verified-bg: #e4f0ea;
+  --hl: #f2e3b4;
+  --on-cta: #ffffff;
+  --on-accent: #ffffff;
+  --ill-ink: #4a342a;
+  --ill-shadow: 4px 4px 0 rgba(74, 52, 42, 0.16);
+}
+
+/* ── Dark: for low-light rooms; light is the default ── */
+[data-theme="dark"] {
+  --bg: #101214;
+  --surface: #16191c;
+  --surface-2: #1c2024;
+  --text: #f2f0eb; /* §30.1 (≥ 9:1) */
+  --text-2: #c9cbcf; /* §30.1 (≥ 9:1) */
+  --text-3: #9ba0a6;
+  --line: #2a2e33;
+  --accent: #8fb1e3;
+  --nav-bg: #0c1a2e;
+  --nav-text: #eceae5;
+  --nav-text-2: #8a93a0;
+  --cta: #b92b27;
+  --cta-solid: #8b1e1e;
+  --critical: #ffa3a3;
+  --critical-text: #ffa3a3;
+  --high: #ffbe6b;
+  --high-text: #ffbe6b;
+  --medium: #93c5fd;
+  --low: #9ba0a6;
+  --ok-text: #6ee7b7;
+  --info-text: #93c5fd;
+  --verified: #56c9b0;
+  --verified-bg: #12302b;
+  --hl: #4a412a;
+  --on-cta: #ffffff;
+  --on-accent: #0c1a2e; /* dark ink on the light-blue accent button */
+}
+
+/* ── §30.1 High Contrast Theme (Black on white, 2px borders, no tints) ── */
+[data-contrast="high"] {
+  --bg: #ffffff !important;
+  --surface: #ffffff !important;
+  --surface-2: #f4f4f4 !important;
+  --text: #000000 !important;
+  --text-2: #1a1a1a !important;
+  --text-3: #404040 !important;
+  --line: #000000 !important;
+  --accent: #000000 !important;
+  --cta: #800000 !important;
+  --cta-solid: #800000 !important;
+  --critical: #800000 !important;
+  --critical-text: #800000 !important;
+  --high: #663300 !important;
+  --high-text: #663300 !important;
+  --ok-text: #004d40 !important;
+  --info-text: #002244 !important;
+  --hl: #fff275 !important;
+  --hl-mark: #fff275 !important;
+}
+
+/* ── §30.1 Text Size Scaling (Standard · Large · Extra large) ── */
+html[data-text-size="standard"] {
+  font-size: 16px;
+}
+
+html[data-text-size="large"] {
+  font-size: 18px;
+}
+
+html[data-text-size="extra-large"] {
+  font-size: 20px;
+}
+
+/* Density (DESIGN §19) - Comfortable is the default row height. */
+html[data-density="compact"] {
+  --row-h: var(--row-h-compact);
+}
+

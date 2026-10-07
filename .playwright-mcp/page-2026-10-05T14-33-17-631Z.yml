@@ -1,0 +1,244 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: §
+        - generic [ref=e6]: Archive Showcase
+        - generic [ref=e7]: Atelier
+      - navigation [ref=e8]:
+        - link "Illustrations" [ref=e9] [cursor=pointer]:
+          - /url: "#illustrations"
+        - link "Motion Studio" [ref=e10] [cursor=pointer]:
+          - /url: "#motion"
+        - link "Cryptographic Proof" [ref=e11] [cursor=pointer]:
+          - /url: "#ledger"
+        - link "Tokens & System" [ref=e12] [cursor=pointer]:
+          - /url: "#tokens"
+      - generic [ref=e13]:
+        - generic "Switch Theme (Press 1-5)" [ref=e14]:
+          - button "Mist Blue (Default) (Press 1)" [ref=e15] [cursor=pointer]
+          - button "Warm Paper (Press 2)" [ref=e17] [cursor=pointer]
+          - button "Obsidian Ink (Press 3)" [ref=e19] [cursor=pointer]
+          - button "Butter & Navy (Press 4)" [ref=e21] [cursor=pointer]
+          - button "Alpine Pine (Press 5)" [ref=e23] [cursor=pointer]
+        - link "Interactive Theater" [ref=e25] [cursor=pointer]:
+          - /url: "#motion"
+  - main [ref=e26]:
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]: Zero AI-Slop Design System
+        - heading [level=1] [ref=e33]:
+          - text: Compliance decisions you can
+          - emphasis [ref=e34]: prove
+          - text: .
+        - paragraph [ref=e35]: "A tactile, human-centered demonstration of modern craft: mathematical vector illustration, spring-based motion physics, and real-time cryptographic audit verification. No neon glows, no fake telemetry, and no generic templates."
+        - generic [ref=e36]:
+          - link "Explore 3D Atelier" [ref=e37] [cursor=pointer]:
+            - /url: "#illustrations"
+          - link "Test Tamper Cascade" [ref=e38] [cursor=pointer]:
+            - /url: "#ledger"
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: "15"
+            - generic [ref=e42]: Atomic SVG Kit Primitives
+          - generic [ref=e43]:
+            - generic [ref=e44]: "4"
+            - generic [ref=e45]: Signature Choreographies
+          - generic [ref=e46]:
+            - generic [ref=e47]: "5"
+            - generic [ref=e48]: Calibrated 60/30/10 Palettes
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: "CASE BRIEFING · REF #AML-2026-0812"
+          - generic [ref=e52]: Pending Officer Review
+        - img [ref=e56]:
+          - generic [ref=e59]: ALERT
+          - generic [ref=e66]: POLICY
+          - generic [ref=e75]:
+            - generic [ref=e77]: EVIDENCE
+            - generic [ref=e80]: USD 9,800.00
+        - generic [ref=e86]:
+          - generic [ref=e87]: Kofi Adjei-Boateng · Structured deposits below USD 10k limit
+          - button "Stamp & Commit" [ref=e88] [cursor=pointer]
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - paragraph [ref=e92]: 01 · Visual Craft
+        - heading "The Illustration Atelier — \"Paper and Thread\"" [level=2] [ref=e93]
+        - paragraph [ref=e94]: Compliance is paperwork made provable. Rather than generic security shields and stock padlocks, we designed a tactile, physical world of layered paper dossiers, wax seals, and unbroken teal provenance threads. Every graphic is composed on an 8px grid using pure mathematical SVG.
+      - generic [ref=e95]:
+        - generic "Click & Drag to Rotate in 3D" [ref=e96]:
+          - generic [ref=e97]:
+            - generic [ref=e98]: "L0: Dossier Folder Base"
+            - generic [ref=e103]: "L1: Evidence & Policy Documents"
+            - generic [ref=e115]: "L2: Provenance Thread"
+            - generic [ref=e120]: "L3: Wax Seal Stamp"
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - heading "Exploded Perspective Dissection" [level=3] [ref=e128]
+            - paragraph [ref=e129]: Drag inside the viewport or adjust the sliders to deconstruct the SVG layer z-indices and inspect physical vector geometry.
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]: Layer Spread (Z-Depth)
+              - generic [ref=e133]: 48px
+            - slider [ref=e134] [cursor=pointer]: "48"
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - generic [ref=e137]: Pitch / Elevation Tilt
+              - generic [ref=e138]: 18°
+            - slider [ref=e139] [cursor=pointer]: "18"
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: Yaw / Rotation Angle
+              - generic [ref=e143]: "-15°"
+            - slider [ref=e144] [cursor=pointer]: "-15"
+      - generic [ref=e145]:
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - heading "Certifications & Deadlines" [level=3] [ref=e157]
+            - paragraph [ref=e158]: Monitors renewal timelines for professional roles. Flips to Critical terracotta when expired.
+          - generic [ref=e159]:
+            - text: "Component:"
+            - code [ref=e160]: SpotCertificate
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - heading "Vendor Document Tracking" [level=3] [ref=e170]
+            - paragraph [ref=e171]: Replaces generic handshake clichés with physical shipping parcels carrying inspection flags.
+          - generic [ref=e172]:
+            - text: "Component:"
+            - code [ref=e173]: VendorBox
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - img [ref=e177]:
+              - generic [ref=e179]: "{"
+              - generic [ref=e180]: "}"
+            - heading "Code & Secret Ingestion" [level=3] [ref=e186]
+            - paragraph [ref=e187]: Detects leaked private keys in software commits before code reaches production environments.
+          - generic [ref=e188]:
+            - text: "Component:"
+            - code [ref=e189]: CodeCard
+    - generic [ref=e191]:
+      - generic [ref=e192]:
+        - paragraph [ref=e193]: 02 · Motion Physics
+        - heading "Motion Choreography & Easing Studio" [level=2] [ref=e194]
+        - paragraph [ref=e195]: Motion explains causality, confirms decisions, and guides human attention. Every transition is calibrated using mathematical easing tokens. Scrub through each choreography frame-by-frame or monitor its velocity on the live curve oscilloscope.
+      - generic [ref=e196]:
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - button "The Wax Seal" [ref=e199] [cursor=pointer]
+            - button "The Thread" [ref=e200] [cursor=pointer]
+            - button "The Link Tear" [ref=e201] [cursor=pointer]
+            - button "The Time Slide" [ref=e202] [cursor=pointer]
+          - paragraph [ref=e210]: ✓ Saved to audit record
+          - generic [ref=e211]:
+            - button "⏸ Pause" [ref=e212] [cursor=pointer]
+            - slider [ref=e213] [cursor=pointer]: "61.1"
+            - combobox [ref=e214]:
+              - option "0.25x"
+              - option "0.5x"
+              - option "1.0x" [selected]
+              - option "2.0x"
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - heading "The Wax Seal Stamp" [level=3] [ref=e218]
+              - generic [ref=e219]: Live Curve
+            - paragraph [ref=e220]: Physical spring overshoot (0.8 → 1.06 → 1.0) stamped onto the document, followed by vector stroke draw-in.
+          - generic [ref=e223]:
+            - generic [ref=e224]:
+              - heading "Generative Flow Engine" [level=3] [ref=e225]
+              - generic [ref=e226]: 60 FPS
+            - paragraph [ref=e227]: Real-time particle kinematics tracing facts to policy proof. Move your cursor over the canvas to draw tactile threads.
+    - generic [ref=e231]:
+      - generic [ref=e232]:
+        - paragraph [ref=e233]: 03 · Cryptographic Non-Repudiation
+        - heading "Cryptographic Proof Chain — Live Tamper Test" [level=2] [ref=e234]
+        - paragraph [ref=e235]: Decisions and evidence are not stored in mutable, trusting databases. Every action produces an SHA-256 hash linked to its predecessor. Simulate an unauthorized change to observe the immediate mathematical cascade.
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - generic [ref=e238]:
+            - generic [ref=e239]:
+              - generic [ref=e240]: "BLOCK #00"
+              - generic [ref=e241]: Verified
+            - generic [ref=e243]: Genesis record initialized
+            - generic [ref=e244]: "Actor: system · 09:00:12"
+            - generic [ref=e245]:
+              - 'generic "Previous Hash: 00000000000000000000000000000000" [ref=e246]': "prev: 0000000000..."
+              - 'generic "Current Hash: 4ac9c26c1b3512e20e6e8b14eeabbaaa" [ref=e247]': "hash: 4ac9c26c1b..."
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - generic [ref=e250]: "BLOCK #01"
+              - generic [ref=e251]: Verified
+            - generic [ref=e253]: "Access token granted: a.owusu"
+            - generic [ref=e254]: "Actor: okta-auth · 09:12:45"
+            - generic [ref=e255]:
+              - 'generic "Previous Hash: 4ac9c26c1b3512e20e6e8b14eeabbaaa" [ref=e256]': "prev: 4ac9c26c1b..."
+              - 'generic "Current Hash: 3409a4421da90d394d2ae3fe496ee93d" [ref=e257]': "hash: 3409a4421d..."
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - generic [ref=e260]: "BLOCK #02"
+              - generic [ref=e261]: Verified
+            - generic [ref=e263]: "Cash deposit: USD 9,800.00"
+            - generic [ref=e264]: "Actor: teller-04 · 10:14:02"
+            - generic [ref=e265]:
+              - 'generic "Previous Hash: 3409a4421da90d394d2ae3fe496ee93d" [ref=e266]': "prev: 3409a4421d..."
+              - 'generic "Current Hash: 8c138e9d2c01b6a4f65e45035c3f65b4" [ref=e267]': "hash: 8c138e9d2c..."
+          - generic [ref=e268]:
+            - generic [ref=e269]:
+              - generic [ref=e270]: "BLOCK #03"
+              - generic [ref=e271]: Verified
+            - generic [ref=e273]: "Alert raised: Structuring under limit"
+            - generic [ref=e274]: "Actor: engine-aml · 10:14:05"
+            - generic [ref=e275]:
+              - 'generic "Previous Hash: 8c138e9d2c01b6a4f65e45035c3f65b4" [ref=e276]': "prev: 8c138e9d2c..."
+              - 'generic "Current Hash: 96161ff181037c672cadde2fa580fae3" [ref=e277]': "hash: 96161ff181..."
+          - generic [ref=e278]:
+            - generic [ref=e279]:
+              - generic [ref=e280]: "BLOCK #04"
+              - generic [ref=e281]: Verified
+            - generic [ref=e283]: "Decision: File SAR draft"
+            - generic [ref=e284]: "Actor: r.mensah · 11:20:30"
+            - generic [ref=e285]:
+              - 'generic "Previous Hash: 96161ff181037c672cadde2fa580fae3" [ref=e286]': "prev: 96161ff181..."
+              - 'generic "Current Hash: 057428015e065112a910d81f96e9b79a" [ref=e287]': "hash: 057428015e..."
+          - generic [ref=e288]:
+            - generic [ref=e289]:
+              - generic [ref=e290]: "BLOCK #05"
+              - generic [ref=e291]: Verified
+            - generic [ref=e293]: Audit pack signed & exported
+            - generic [ref=e294]: "Actor: r.mensah · 11:21:10"
+            - generic [ref=e295]:
+              - 'generic "Previous Hash: 057428015e065112a910d81f96e9b79a" [ref=e296]': "prev: 057428015e..."
+              - 'generic "Current Hash: b289265cbb842e2a9e9ba5241a1aac12" [ref=e297]': "hash: b289265cbb..."
+        - generic [ref=e298]:
+          - generic [ref=e299]: All 6 records verified against SHA-256 chain. Zero alterations detected.
+          - generic [ref=e303]:
+            - 'button "Simulate Tamper on Block #02" [ref=e304] [cursor=pointer]'
+            - button "Restore Original Chain" [disabled] [ref=e305] [cursor=pointer]
+    - generic [ref=e307]:
+      - generic [ref=e308]:
+        - paragraph [ref=e309]: 04 · System Architecture
+        - heading "Design System & Token Architecture" [level=2] [ref=e310]
+        - paragraph [ref=e311]: All user-facing elements strictly adhere to the 60% Canvas / 30% Structure / 10% Signal accent rule. Every palette enforces WCAG AA (≥ 4.5:1) luminance contrast for critical text.
+      - generic [ref=e312]:
+        - generic [ref=e313] [cursor=pointer]:
+          - generic [ref=e314]: Mist Blue (Default)
+          - paragraph [ref=e316]: Cool slate grey canvas · Deep navy structure · Signal red
+        - generic [ref=e317] [cursor=pointer]:
+          - generic [ref=e318]: Warm Paper
+          - paragraph [ref=e320]: Archival cream canvas · Charcoal type · Brick red accent
+        - generic [ref=e321] [cursor=pointer]:
+          - generic [ref=e322]: Obsidian Ink
+          - paragraph [ref=e324]: Near-black obsidian · Ice blue links · Crimson signal
+        - generic [ref=e325] [cursor=pointer]:
+          - generic [ref=e326]: Butter & Navy
+          - paragraph [ref=e328]: Parchment yellow · Deep marine structure · Bright red
+        - generic [ref=e329] [cursor=pointer]:
+          - generic [ref=e330]: Alpine Pine
+          - paragraph [ref=e332]: Muted linen canvas · Forest pine structure · Amber gold
+  - contentinfo [ref=e333]:
+    - generic [ref=e334]:
+      - generic [ref=e335]:
+        - paragraph [ref=e336]: Archive Showcase — Precision Design & Motion Atelier
+        - paragraph [ref=e337]: "Zero-dependency standalone demonstration · Keys: 1-5 Switch Palettes · Space Play/Pause Motion · T Tamper Test"
+      - link "↑ Back to Top" [ref=e339] [cursor=pointer]:
+        - /url: "#"

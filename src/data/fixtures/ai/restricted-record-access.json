@@ -1,0 +1,54 @@
+{
+  "scenarioId": "restricted-record-access",
+  "ruleId": "HIPAA-001",
+  "subjectId": "p_daniel",
+  "explanation": [
+    {
+      "heading": "Why this was flagged",
+      "text": "Daniel Aterah viewed the restricted record Patient record rec_9 and is not on the care team. The record carries the restricted flag, and the viewer is absent from the care-team list.",
+      "citations": ["doc_access_control#sec-3"],
+      "evidenceRefs": [
+        { "type": "event", "id": "evt_view" },
+        { "type": "evidence", "id": "ev_0" }
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "text": "A restricted patient record was viewed by someone who is not on the record's care team. The policy limits restricted patient records to members of the care team, and the minimum necessary standard asks for limiting access to what the task needs.",
+      "citations": ["doc_access_control#sec-3", "cl_45cfr_164_502_b"],
+      "evidenceRefs": []
+    }
+  ],
+  "draft": {
+    "kind": "hipaa_4factor",
+    "paragraphs": [
+      {
+        "heading": "Nature of information",
+        "text": "Daniel Aterah viewed the restricted record Patient record rec_9 and is not on the care team. The record is flagged restricted and holds protected health information.",
+        "citations": ["cl_45cfr_164_502_b"],
+        "evidenceRefs": [
+          { "type": "event", "id": "evt_view" },
+          { "type": "evidence", "id": "ev_0" }
+        ]
+      },
+      {
+        "heading": "Who accessed",
+        "text": "Daniel Aterah (p_daniel) is not on the record's care team. The viewer does not appear on the care-team list for this record.",
+        "citations": ["doc_access_control#sec-3"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Mitigation",
+        "text": "Record the mitigation taken and its evidence during review. Care team lists must be updated the same day a patient changes ward.",
+        "citations": ["doc_access_control#sec-3"],
+        "evidenceRefs": []
+      },
+      {
+        "heading": "Likelihood of compromise",
+        "text": "Assess during review. This finding records the access facts, not a conclusion. The policy starts from a presumption of compromise unless a risk assessment shows a low probability that the information was compromised.",
+        "citations": ["cl_45cfr_164_402"],
+        "evidenceRefs": []
+      }
+    ]
+  }
+}
