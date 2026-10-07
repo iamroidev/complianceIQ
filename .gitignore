@@ -38,3 +38,5 @@ blob-report/
 # Local data cache
 .data/
 
+
+.vercel
